@@ -17,6 +17,7 @@
 .footer .top .wide {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer .bottom {
@@ -24,4 +25,41 @@
   background: #202020;
   line-height: 0;
   padding: 2rem 0;
+}
+
+@media screen and (max-width: 900px) {
+  .footer .top .wide,
+  .footer .bottom .wide {
+    flex-direction: column;
+  }
+
+  .footer .logo,
+  .footer .taLeft,
+  .footer .taRight {
+    width: 90%;
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
+
+  .footer .logo {
+    order: -1;
+    height: auto;
+  }
+
+  .footer .taLeft,
+  .footer .logo {
+    padding-bottom: 2rem;
+    margin: 0 auto 2rem;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer .bottom .taLeft {
+    border: 0;
+    margin-bottom: 1rem;
+  }
+
+  .footer .LazyImage {
+    max-width: 20rem;
+  }
 }

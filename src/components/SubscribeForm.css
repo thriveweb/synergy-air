@@ -32,3 +32,10 @@ input.enquiryInput:focus,
 input.enquirySubmit:focus {
   outline: 0;
 }
+
+@media screen and (max-width: 900px) {
+  .subscribeForm {
+    max-width: 26rem;
+    margin: auto;
+  }
+}

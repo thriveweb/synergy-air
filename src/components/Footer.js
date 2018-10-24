@@ -1,9 +1,9 @@
 import React from 'react'
 
-import './Footer.css'
-
+import Image from './Image'
 import SubscribeForm from './SubscribeForm'
 import './SubscribeForm.css'
+import './Footer.css'
 
 export default ({ globalSettings, socialSettings }) => (
   <div className="footer">
@@ -17,6 +17,10 @@ export default ({ globalSettings, socialSettings }) => (
           <a href="mailto:spares@synergyfitness.com.au">
             spares@synergyfitness.com.au
           </a>
+        </div>
+
+        <div className="logo">
+          <Image src="images/logo_footer.svg" resolutions="small" />
         </div>
 
         <div className="taRight">
