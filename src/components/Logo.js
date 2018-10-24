@@ -4,7 +4,7 @@ import './Logo.css'
 
 export default ({ inverted }) => (
   <div
-    className="Logo"
+    className="logo"
     style={{
       backgroundImage: `url(/images/logo.svg)`
     }}

@@ -1,47 +1,102 @@
-.Nav {
+.nav {
   background: white;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 100;
   border-bottom: 1px solid var(--lightGrey);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.025);
 }
 
-.Nav--Container {
+.nav .wide {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: 6rem;
+  padding: 0 1rem;
 }
 
-.Nav--Links {
+.nav-links {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
 }
 
-.Nav--Links > * + * {
+.nav-links > * + * {
   margin-left: 1rem;
 }
 
-.Nav .Logo {
+.nav .nav-links .NavLink {
+  padding: 3rem 1.5rem;
+}
+
+.nav .has-children {
+  cursor: pointer;
+}
+
+.nav .has-children:after {
+  content: '+';
+  color: var(--primary);
+  padding-left: 0.5rem;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 2.95rem;
+  right: 0;
+}
+
+.nav .has-children:hover .sub-menu {
+  display: block;
+}
+
+.nav .sub-menu {
+  display: none;
+  width: 15rem;
+  top: 6.1rem;
+  background: #202020;
+  margin-left: -1.5rem;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  transition: 0.5s ease all;
+}
+
+.nav .sub-menu li {
+  transition: 0.5s ease all;
+}
+
+.nav .sub-menu li:hover a {
+  color: var(--primary);
+}
+
+.nav .sub-menu a {
+  font-size: 1.4rem;
+  color: white;
+  padding: 1.5rem;
+  width: 15rem;
+  display: block;
+  font-weight: 100;
+  text-transform: none;
+  letter-spacing: 0;
+  border-bottom: 1px solid #333;
+}
+
+.nav .logo {
   margin-right: 3rem;
   position: relative;
 }
 
-.Nav--MenuButton {
+.menu-button {
   display: none;
+  -webkit-appearance: none;
+  border: 0;
+  outline: 0;
 }
 
 .NavLink {
-  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: black;
+  letter-spacing: 2px;
   display: block;
-  font-weight: 500;
-  transition: color 0.2s, border-bottom-color 0.2s;
-  color: inherit;
   text-decoration: none;
-  border-bottom: 2px solid;
-  border-bottom-color: transparent;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
 }
 
 .NavLink:hover,
@@ -51,22 +106,22 @@
   border-bottom-color: currentColor;
 }
 
-@media (max-width: 600px) {
-  .Nav--Container {
+@media (max-width: 720px) {
+  .nav .wide {
     display: flex;
+    padding: 2rem;
   }
 
-  .Nav--MenuButton {
+  .menu-button {
     display: block;
     margin-left: auto;
     z-index: 1;
-  }
-  .Nav .Logo {
-    z-index: 1;
+    background: none;
   }
 
-  .Nav--Links {
+  .nav-links {
     display: none;
+    text-align: center;
     align-items: center;
     flex-direction: column;
     position: fixed;
@@ -76,51 +131,95 @@
     right: 0;
     bottom: 0;
     background: white;
-    animation: Nav--Links 0.2s ease;
+    animation: nav-links 0.2s ease;
   }
 
-  .Nav--Links > * + * {
+  .nav-active .nav-links {
+    display: flex;
+    text-align: center;
+  }
+
+  .nav-links > * + * {
     margin-left: 0;
     margin-top: 1rem;
   }
 
-  .Nav-active .Nav--Links {
-    display: flex;
+  .nav .NavLink,
+  .nav .nav-links a,
+  .nav .sub-menu li {
+    padding: 0;
+    margin: 0;
   }
 
-  .Nav-active .NavLink {
+  .nav .nav-links .NavLink,
+  .nav .nav-links a {
+    width: 100%;
+    padding: 3rem 0 !important;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .nav .nav-links a:last-child {
+    border: 0;
+  }
+
+  .nav .has-children:after {
+    right: 4rem;
+    top: 2.55rem;
+    font-size: 2rem;
+  }
+
+  .nav .has-children .sub-menu {
+    display: none !important;
+  }
+
+  .nav .has-children .dropdown-active .sub-menu {
+    display: block !important;
+  }
+
+  .nav .sub-menu {
+    display: none;
+    width: auto !important;
+    margin: auto;
+    padding: 0;
+    position: relative;
+    top: 3rem;
+    background: #f1f1f1;
+  }
+
+  .nav .sub-menu li a {
+    border: 0;
+    padding: 1rem;
+    color: black;
+    font-size: 1.5rem;
+  }
+
+  .nav-active .NavLink {
     animation: Nav--Link 0.3s ease-out;
     animation-fill-mode: both;
   }
 
-  .Nav .NavLink {
-    font-size: 2.5rem;
-    font-weight: 300;
-  }
-
-  .Nav .NavLink:nth-of-type(2) {
+  .nav .NavLink:nth-of-type(2) {
     animation-delay: 0.1s;
   }
-  .Nav .NavLink:nth-of-type(3) {
+
+  .nav .NavLink:nth-of-type(3) {
     animation-delay: 0.2s;
   }
-  .Nav .NavLink:nth-of-type(4) {
+
+  .nav .NavLink:nth-of-type(4) {
     animation-delay: 0.3s;
   }
-  .Nav .NavLink:nth-of-type(5) {
+
+  .nav .NavLink:nth-of-type(5) {
     animation-delay: 0.4s;
   }
-  .Nav .NavLink:nth-of-type(6) {
-    animation-delay: 0.5s;
-  }
-  .Nav .NavLink:nth-of-type(7) {
-    animation-delay: 0.6s;
-  }
-  .Nav .NavLink:nth-of-type(8) {
-    animation-delay: 0.7s;
-  }
-  .Nav .NavLink:nth-of-type(7) {
-    animation-delay: 0.6s;
+}
+
+@media (max-height: 760px) {
+  .nav-links {
+    justify-content: flex-start;
+    padding-top: 5rem;
   }
 }
 
@@ -129,13 +228,14 @@
     transform: translate(0rem, 1rem);
     opacity: 0;
   }
+
   to {
     opacity: 1;
     transform: translate(0, 0);
   }
 }
 
-@keyframes Nav--Links {
+@keyframes nav-links {
   from {
     opacity: 0;
   }
