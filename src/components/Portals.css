@@ -1,0 +1,53 @@
+.portals {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.portals .item,
+.portals .item .Image {
+  height: 30rem;
+}
+
+.portals .item {
+  border-radius: 4rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.portals .item .absolute {
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+  transition: all 0.5s ease;
+}
+
+.portals .item .absolute:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.portals .item .details {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.portals .item .details h5 {
+  opacity: 0;
+  color: var(--primary);
+  transition: all 0.5s ease;
+}
+
+.portals .item .absolute:hover .details h5 {
+  opacity: 1;
+}
+
+@media screen and (max-width: 850px) {
+  .portals {
+    display: block;
+    margin: auto;
+  }
+}
