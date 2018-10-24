@@ -29,10 +29,7 @@ export default ({ globalSettings, socialSettings }) => (
       <div className="wide">
         <div className="taLeft">© 2018 Synergy Air</div>
         <div className="taRight">
-          Site by{' '}
-          <a href="https://thriveweb.com.au" target="_blank">
-            Thrive
-          </a>
+          Site by <a href="https://thriveweb.com.au">Thrive</a>
         </div>
       </div>
     </div>
