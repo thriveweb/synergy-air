@@ -9,7 +9,7 @@ import ImageSlider from '../components/ImageSlider'
 import './AboutPage.css'
 
 // Export Template for use in CMS preview
-export const AboutPageTemplate = ({ title }) => (
+export const AboutPageTemplate = ({ title, slider }) => (
   <main className="about">
     <Helmet>
       <title>{title}</title>
@@ -46,7 +46,7 @@ export const AboutPageTemplate = ({ title }) => (
 
     <section>
       <div className="wide">
-        <ImageSlider />
+        <ImageSlider slider={slider} />
       </div>
     </section>
   </main>
@@ -66,6 +66,9 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        slider {
+          image
+        }
       }
     }
   }
