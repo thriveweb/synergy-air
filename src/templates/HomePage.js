@@ -1,23 +1,19 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
 
 import PageHeader from '../components/PageHeader'
-import Content from '../components/Content'
 import Layout from '../components/Layout'
+import Portals from '../components/Portals'
 
 // Export Template for use in CMS preview
-export const HomePageTemplate = ({ title, subtitle, featuredImage, body }) => (
+export const HomePageTemplate = ({ title, featuredImage, portals }) => (
   <main className="Home">
-    <PageHeader
-      large
-      title={title}
-      subtitle={subtitle}
-      backgroundImage={featuredImage}
-    />
+    <PageHeader large title={title} backgroundImage={featuredImage} />
 
-    <section className="section">
-      <div className="container">
-        <Content source={body} />
+    <section>
+      <div className="wide">
+        <Portals portals={portals} />
       </div>
     </section>
   </main>
@@ -42,8 +38,13 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        subtitle
         featuredImage
+        portals {
+          title
+          image
+          productLink
+          distLink
+        }
       }
     }
   }
