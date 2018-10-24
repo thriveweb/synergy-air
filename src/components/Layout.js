@@ -41,6 +41,10 @@ export default ({ children }) => {
                 href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700"
                 rel="stylesheet"
               />
+              <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css"
+              />
             </Helmet>
 
             <Meta
