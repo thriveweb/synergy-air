@@ -1,0 +1,34 @@
+.subscribeForm {
+  /* border: 1px solid; */
+  line-height: 0;
+}
+
+input.enquiryInput,
+input.enquirySubmit {
+  border: 1px solid white;
+  padding: 0.8rem 1rem;
+  float: left;
+}
+
+input.enquiryInput {
+  background: none;
+  color: #999;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+input.enquirySubmit {
+  background: white;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+input.enquirySubmit:hover {
+  color: var(--primary);
+}
+
+input.enquiryInput:focus,
+input.enquirySubmit:focus {
+  outline: 0;
+}
