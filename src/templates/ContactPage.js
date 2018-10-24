@@ -5,68 +5,61 @@ import { graphql } from 'gatsby'
 
 import PageHeader from '../components/PageHeader'
 import FormSimpleAjax from '../components/FormSimpleAjax'
-import Content from '../components/Content'
-import GoogleMap from '../components/GoogleMap'
 import Layout from '../components/Layout'
 import './ContactPage.css'
 
 // Export Template for use in CMS preview
 export const ContactPageTemplate = ({
-  body,
   title,
-  subtitle,
   featuredImage,
   address,
   phone,
-  email,
-  locations
+  email
 }) => (
-  <main className="Contact">
+  <main className="contact">
     <Helmet>
       <title>{title}</title>
     </Helmet>
-    <PageHeader
-      title={title}
-      subtitle={subtitle}
-      backgroundImage={featuredImage}
-    />
-    <section className="section Contact--Section1">
-      <div className="container Contact--Section1--Container">
-        <div>
-          <Content source={body} />
-          <div className="Contact--Details">
-            {address && (
-              <a
-                className="Contact--Details--Item"
-                href={`https://www.google.com.au/maps/search/${encodeURI(
-                  address
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MapPin /> {address}
-              </a>
-            )}
+    <PageHeader title={title} />
+    <section>
+      <div className="thin flex">
+        <div className="half">
+          <div className="details">
+            <h4>Get in touch</h4>
+            <p>To contact us via email, please complete the enquiry form.</p>
+          </div>
+
+          <div className="details">
+            <h4>Based in Australia</h4>
+
             {phone && (
-              <a className="Contact--Details--Item" href={`tel:${phone}`}>
-                <Smartphone /> {phone}
-              </a>
+              <p>
+                <strong>P</strong>
+                <a href={`tel:${phone}`}>{phone}</a>
+              </p>
             )}
+
             {email && (
-              <a className="Contact--Details--Item" href={`mailto:${email}`}>
-                <Mail /> {email}
-              </a>
+              <p>
+                <strong>E</strong>
+                <a href={`mailto:${email}`}>{email}</a>
+              </p>
+            )}
+
+            {address && (
+              <p>
+                <strong>A</strong>
+                {address}
+              </p>
             )}
           </div>
         </div>
 
-        <div>
+        <div className="half">
           <FormSimpleAjax name="Simple Form Ajax" />
         </div>
       </div>
     </section>
-
-    <GoogleMap locations={locations} />
   </main>
 )
 
@@ -83,18 +76,11 @@ export const pageQuery = graphql`
     page: markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
         template
-        subtitle
-        featuredImage
+        title
         address
         phone
         email
-        locations {
-          mapLink
-          lat
-          lng
-        }
       }
     }
   }

@@ -3,12 +3,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  max-width: 500px;
   margin: 2.5rem 0;
 }
 
 .Form > * + * {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .Form--Label {
@@ -25,9 +24,10 @@
   box-sizing: border-box;
   display: block;
   margin: 0;
-  border: 1px solid #bababa;
-  padding: 1.5rem 2rem;
-  border-radius: var(--borderRadius);
+  border: 1px solid #e5e5e5;
+  padding: 1.3rem 2rem;
+  border-radius: 0.4rem;
+  font-weight: 100;
   line-height: 1.25em;
   transition: border-color 0.2s;
   resize: none;
@@ -74,6 +74,7 @@
 
 .Form--Input::placeholder {
   text-transform: none;
+  color: black;
 }
 
 .Form--Alert {
@@ -85,4 +86,8 @@
 
 .Form--Input-honey {
   display: none;
+}
+
+.Form .button {
+  margin: 2rem 0 0;
 }

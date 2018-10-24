@@ -72,7 +72,16 @@ class Form extends React.Component {
           <input
             className="Form--Input"
             type="text"
-            placeholder="Name"
+            placeholder="First Name"
+            name="fname"
+            required
+          />
+        </label>
+        <label className="Form--Label">
+          <input
+            className="Form--Input"
+            type="ltext"
+            placeholder="Last Name"
             name="name"
             required
           />
@@ -86,20 +95,23 @@ class Form extends React.Component {
             required
           />
         </label>
-        <label className="Form--Label has-arrow">
-          <select
-            className="Form--Input Form--Select"
-            name="type"
-            defaultValue="Type of Enquiry"
+        <label className="Form--Label">
+          <input
+            className="Form--Input"
+            type="phone"
+            placeholder="Phone Number"
+            name="phone"
             required
-          >
-            <option disabled hidden>
-              Type of Enquiry
-            </option>
-            <option>Need to know more</option>
-            <option>Found a bug</option>
-            <option>Want to say hello</option>
-          </select>
+          />
+        </label>
+        <label className="Form--Label">
+          <input
+            className="Form--Input"
+            type="address"
+            placeholder="Address"
+            name="address"
+            required
+          />
         </label>
         <label className="Form--Label">
           <textarea
@@ -119,9 +131,9 @@ class Form extends React.Component {
         {!!subject && <input type="hidden" name="subject" value={subject} />}
         <input type="hidden" name="form-name" value={name} />
         <input
-          className="Button Form--SubmitButton"
+          className="button Form--SubmitButton"
           type="submit"
-          value="Enquire"
+          value="Submit"
           disabled={this.state.disabled}
         />
       </form>
