@@ -17,7 +17,7 @@ export default ({ portals }) => (
               <h5>View Products</h5>
             </div>
           </Link>
-          <Image src={item.image} />
+          <Image src={item.image} alt={item.title} />
         </div>
 
         <Link to={item.distLink} className="button">

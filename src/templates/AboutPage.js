@@ -5,11 +5,11 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import Layout from '../components/Layout.js'
 import Image from '../components/Image'
-import ImageSlider from '../components/ImageSlider'
+// import ImageSlider from '../components/ImageSlider'
 import './AboutPage.css'
 
 // Export Template for use in CMS preview
-export const AboutPageTemplate = ({ title, slider }) => (
+export const AboutPageTemplate = ({ title }) => (
   <main className="about">
     <Helmet>
       <title>{title}</title>
@@ -28,8 +28,7 @@ export const AboutPageTemplate = ({ title, slider }) => (
             volutpat magna, eget bibendum ex turpis scelerisque orci.
             Suspendisse vehicula eleifend nibh eget aliquam. Etiam mollis
             vehicula elit et interdum. Donec blandit, velit sit amet viverra
-            eleifend, risus urna rutrum diam, quis feugiat eros turpis sed
-            turpis.
+            eleifend, risus urna rutrum quis feugiat eros turpis sed turpis.
           </p>
         </div>
         <div className="half">
@@ -45,9 +44,7 @@ export const AboutPageTemplate = ({ title, slider }) => (
     </section>
 
     <section>
-      <div className="wide">
-        <ImageSlider slider={slider} />
-      </div>
+      <div className="wide">{/* <ImageSlider slider={slider} /> */}</div>
     </section>
   </main>
 )
@@ -66,9 +63,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        slider {
-          image
-        }
       }
     }
   }

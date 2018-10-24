@@ -23,8 +23,8 @@ export default ({ slider }) => {
     <div className="image-slider">
       <Swiper {...params}>
         {slider.map((item, index) => (
-          <div>
-            <Image src={item.image} alt="" />
+          <div key={`item${index}`}>
+            <Image src={item.image} resolution="small" alt="" />
           </div>
         ))}
       </Swiper>
