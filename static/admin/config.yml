@@ -39,7 +39,7 @@ collections: # A list of collections the CMS should be able to edit
               name: featuredImage,
               widget: image,
               options:
-                { media_library: { config: { imageShrink: 2600x2600 } } },
+                { media_library: { config: { multipe: true } } },
             }
           - { label: Subtitle, name: subtitle, widget: markdown }
           - { label: Body, name: body, widget: markdown }
@@ -151,11 +151,11 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Slug, name: slug, widget: hidden, default: 'about' }
           - { label: Title, name: title, widget: string }
-          - { label: Featured Images, name: featuredImage, widget: image }
-          - { label: Subtitle, name: subtitle, widget: markdown }
-          - { label: Section 1, name: section1, widget: markdown }
-          - { label: Section 2, name: section2, widget: markdown }
-          - { label: Test Image, name: testImage, widget: image }
+          - label: Slider
+            name: slider
+            widget: list
+            fields:
+              - image: { media_library: { config: { multipe: true } } }
           - label: 'Meta'
             required: false
             name: 'meta'
