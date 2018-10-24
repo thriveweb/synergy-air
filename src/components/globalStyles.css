@@ -30,6 +30,8 @@ a:hover {
 }
 
 p {
+  font-size: 1.6rem;
+  line-height: 150%;
   margin-top: 0;
   margin-bottom: 1rem;
 }

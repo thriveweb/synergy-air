@@ -20,7 +20,9 @@ export const ContactPageTemplate = ({
     <Helmet>
       <title>{title}</title>
     </Helmet>
+
     <PageHeader title={title} />
+
     <section>
       <div className="thin flex">
         <div className="half">
