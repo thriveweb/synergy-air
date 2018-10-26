@@ -29,11 +29,17 @@ a:hover {
   color: var(--primary);
 }
 
-p {
+p,
+ul,
+a {
   font-size: 1.6rem;
   line-height: 150%;
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+ul {
+  padding: 0 0 0 2rem;
 }
 
 strong {
