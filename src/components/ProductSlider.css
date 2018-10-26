@@ -1,16 +1,9 @@
 .product-slider {
   display: block;
-  overflow-x: hidden;
-  padding-bottom: 3rem;
 }
 
 .product-slider .swiper-container {
   border: 1px solid #e5e5e5;
-  overflow: visible !important;
-}
-
-.product-slider .swiper-pagination {
-  bottom: -3rem !important;
 }
 
 .swiper-pagination-bullet-active {

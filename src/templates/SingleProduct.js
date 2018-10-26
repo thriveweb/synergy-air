@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import Link from 'gatsby-link'
 
 import Swiper from 'react-id-swiper/lib/custom'
 
@@ -19,7 +18,7 @@ export const SingleProductTemplate = ({
   title,
   categories,
   products,
-  productImage,
+  productSlider,
   productTitle,
   overview,
   downloads,
@@ -45,18 +44,11 @@ export const SingleProductTemplate = ({
       <div className="thin flex">
         <div className="product-slider half">
           <Swiper {...params}>
-            <div>
-              <Image src="/images/product1.png" resolution="small" alt="" />
-            </div>
-            <div>
-              <Image src="/images/product1.png" resolution="small" alt="" />
-            </div>
-            <div>
-              <Image src="/images/product1.png" resolution="small" alt="" />
-            </div>
-            <div>
-              <Image src="/images/product1.png" resolution="small" alt="" />
-            </div>
+            {productSlider.map((slide, index) => (
+              <div>
+                <Image src={slide.image} resolution="small" alt="" />
+              </div>
+            ))}
           </Swiper>
         </div>
 
@@ -105,8 +97,10 @@ export const pageQuery = graphql`
           category
         }
         productTitle
-        productImage {
-          ...FluidImage
+        productSlider {
+          image {
+            ...FluidImage
+          }
         }
         overview
         downloads {

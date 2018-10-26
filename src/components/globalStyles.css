@@ -107,6 +107,10 @@ h5 {
 
 /* --- layout --- */
 
+.clear {
+  clear: both;
+}
+
 .white {
   background: white;
   color: black;

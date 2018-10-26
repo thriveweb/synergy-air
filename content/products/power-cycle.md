@@ -1,8 +1,11 @@
 ---
 template: SingleProduct
-slug: 'classic/product1'
+productImage: /images/power-cycle-1.png
+slug: 'classic/power-cycle'
 productTitle: Power Cycle
-productImage: /images/product1.png
+productSlider:
+  - image: /images/power-cycle-1.png
+  - image: /images/power-cycle-2.png
 overview: |-
   Patented integrated continuous variable transmission
   - Weighted air displacement turbine with gearing ratio of 1:6 to 1:24

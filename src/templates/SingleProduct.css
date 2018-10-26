@@ -15,6 +15,16 @@
   margin-bottom: 2rem;
 }
 
+.single-product .swiper-container {
+  height: 60rem;
+}
+
+.single-product .swiper-container .Image,
+.single-product .swiper-container .Image img {
+  height: 55rem;
+  object-fit: contain !important;
+}
+
 .single-product .Image.half {
   border: 1px solid #e5e5e5;
 }
