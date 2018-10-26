@@ -1,0 +1,33 @@
+.share-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.share-buttons li {
+  list-style-type: none;
+  margin-left: 2rem;
+}
+
+.share-buttons li:last-of-type {
+  margin-right: 0;
+}
+
+.share-buttons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+}
+
+.share-buttons span {
+  font-size: 1.4rem;
+}
+
+.share-buttons a:hover {
+  color: var(--primary);
+  transition: all ease 0.5s;
+}
