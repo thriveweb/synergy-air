@@ -42,19 +42,21 @@ export const SingleProductTemplate = ({
 
     <section>
       <div className="thin flex">
-        <div className="product-slider half">
-          <Swiper {...params}>
-            {productSlider.map((slide, index) => (
-              <div>
-                <Image
-                  src={slide.image}
-                  resolutions="small"
-                  alt={title + index}
-                />
-              </div>
-            ))}
-          </Swiper>
-        </div>
+        {productSlider && (
+          <div className="product-slider half">
+            <Swiper {...params}>
+              {productSlider.map((slide, index) => (
+                <div>
+                  <Image
+                    src={slide.image}
+                    resolutions="small"
+                    alt={title + index}
+                  />
+                </div>
+              ))}
+            </Swiper>
+          </div>
+        )}
 
         <div className="half">
           <h5>{productTitle}</h5>
