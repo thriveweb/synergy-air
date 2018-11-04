@@ -10,11 +10,13 @@ export const HomePageTemplate = ({ title, featuredImage, portals }) => (
   <main className="Home">
     <PageHeader large title={title} backgroundImage={featuredImage} />
 
-    <section>
-      <div className="wide">
-        <Portals portals={portals} />
-      </div>
-    </section>
+    {portals && (
+      <section>
+        <div className="wide">
+          <Portals portals={portals} />
+        </div>
+      </section>
+    )}
   </main>
 )
 
