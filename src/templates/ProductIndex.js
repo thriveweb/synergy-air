@@ -65,9 +65,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             productTitle
-            productImage {
-              ...NoBlurImage
-            }
           }
         }
       }

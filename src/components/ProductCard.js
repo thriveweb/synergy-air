@@ -6,8 +6,8 @@ import './ProductCard.css'
 
 const ProductCard = ({ slug, productTitle, productImage, ...props }) => (
   <Link to={slug} className={`product-card relative`} {...props}>
-    <Image resolution="medium" src={productImage} alt={productTitle} />
-    <div clasaNem="clear" />
+    <Image resolutions="medium" src={productImage} alt={productTitle} />
+    <div className="clear" />
     <p>{productTitle}</p>
   </Link>
 )

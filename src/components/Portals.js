@@ -7,7 +7,7 @@ import './Portals.css'
 export default ({ portals }) => (
   <div className="portals">
     {portals.map((item, index) => (
-      <div className="half">
+      <div className="half" key={index}>
         <div className="item">
           <Link to={item.productLink} className="absolute">
             <div className="details">
