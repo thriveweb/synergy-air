@@ -46,7 +46,11 @@ export const SingleProductTemplate = ({
           <Swiper {...params}>
             {productSlider.map((slide, index) => (
               <div>
-                <Image src={slide.image} resolution="small" alt="" />
+                <Image
+                  src={slide.image}
+                  resolutions="small"
+                  alt={title + index}
+                />
               </div>
             ))}
           </Swiper>
@@ -97,11 +101,6 @@ export const pageQuery = graphql`
           category
         }
         productTitle
-        productSlider {
-          image {
-            ...FluidImage
-          }
-        }
         overview
         downloads {
           title
