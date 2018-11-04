@@ -39,7 +39,7 @@ collections: # A list of collections the CMS should be able to edit
             name: 'portals'
             widget: 'list'
             fields:
-              - { label: Title, name: title, widget: text }
+              - { label: Title, name: title, widget: string }
               - { label: Image, name: image, widget: image }
               - { label: Product Link, name: productLink, widget: string }
               - { label: Distributors Link, name: distLink, widget: string }
