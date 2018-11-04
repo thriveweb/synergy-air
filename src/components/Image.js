@@ -1,89 +1,109 @@
 import React from 'react'
-import GatsbyImage from 'gatsby-image'
 import PropTypes from 'prop-types'
-import _get from 'lodash/get'
+
+// import 'intersection-observer'
+// import Observer from '@researchgate/react-intersection-observer'
 
 import './Image.css'
 
-const extractChildImageSharp = (src = '', format) => {
-  if (!format) {
-    if (typeof src === 'string' && !format) return src
-    const childImageSharp = _get(src, 'childImageSharp')
-    if (!childImageSharp) return _get(src, 'publicURL')
-  }
-  if (format === 'sizes' || format === 'resolutions')
-    return _get(src, `childImageSharp.${format}`)
-  return src
-}
-
 class Image extends React.Component {
+  // state = {
+  //   isIntersecting: false
+  // }
+  //
+  // handleIntersection = e => {
+  //   console.log(e.isIntersecting)
+  //   if (e.isIntersecting) {
+  //     this.setState({ isIntersecting: true })
+  //   }
+  // }
+
+  checkIfIsLocalSrc(src) {
+    if (src.includes('ucarecdn.com')) return false
+    return true
+  }
+
   render() {
     let {
       background,
       backgroundSize = 'cover',
+      resolutions = '1000x',
       className = '',
       src,
-      source,
+      secSet = '',
+      fullSrc,
+      // smallSrc,
       onClick,
-      sizes,
-      alt,
-      style,
-      imgStyle
+      alt = ''
     } = this.props
 
-    const imageSizes = extractChildImageSharp(src, 'sizes')
-    const resolutions = extractChildImageSharp(src, 'resolutions')
-    const imageSrc = extractChildImageSharp(src || source)
+    const isLocalImg = this.checkIfIsLocalSrc(src)
+    /* create source set for images */
+    if (!isLocalImg) {
+      secSet = `
+      ${src}-/progressive/yes/-/format/auto/-/resize/320x/320.jpg 320w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/450x/450.jpg 450w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/640x/640.jpg 640w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/750x/750.jpg 750w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/800x/800.jpg 800w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/900x/900.jpg 900w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/1000x/-/quality/lightest/1000.jpg 1000w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/1200x/-/quality/lightest/1200.jpg 1200w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/1500x/-/quality/lightest/1500.jpg 1500w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/1600x/-/quality/lightest/1600.jpg 16000w,
+      ${src}-/progressive/yes/-/format/auto/-/resize/2000x/-/quality/lightest/2000.jpg 2000w`
+    }
+
+    /* add resolutions options for inline images */
+    if (resolutions === 'small') {
+      resolutions = '800x'
+    } else if (resolutions === 'medium') {
+      resolutions = '1000x'
+    } else if (resolutions === 'large') {
+      resolutions = '2000x'
+    }
+
+    fullSrc = `${src}${
+      isLocalImg
+        ? ''
+        : '-/progressive/yes/-/format/auto/-/resize/' + resolutions + '/'
+    }`
+    // smallSrc = `${src}${
+    //   isLocalImg ? '' : '-/progressive/yes/-/format/auto/-/resize/10x/'
+    // }`
 
     if (background) {
       let style = {}
-
-      if (typeof imageSrc === 'string') {
-        style = { backgroundImage: `url(${imageSrc})`, backgroundSize }
+      style = {
+        // backgroundImage: `url(${
+        //   this.state.isIntersecting ? fullSrc : smallSrc
+        // })`,
+        backgroundImage: `url(${fullSrc})`,
+        backgroundSize
       }
-
       return (
-        <div className={`BackgroundImage absolute ${className}`} style={style}>
-          {!style.backgroundImage && (
-            <Image
-              src={imageSrc}
-              alt={alt}
-              style={{
-                position: 'absolute',
-                width: 'auto',
-                height: 'auto'
-              }}
-              imgStyle={{
-                objectFit: backgroundSize
-              }}
-            />
-          )}
-        </div>
-      )
-    }
-
-    if (imageSizes || resolutions) {
-      return (
-        <GatsbyImage
-          className={`Image ${className}`}
-          sizes={imageSizes}
-          resolutions={resolutions}
-          onClick={onClick}
-          alt={alt}
+        // <Observer onChange={this.handleIntersection}>
+        <div
+          className={`BackgroundImage absolute ${className}`}
           style={style}
-          imgStyle={imgStyle}
         />
+        // </Observer>
       )
     }
 
     return (
+      // <Observer onChange={this.handleIntersection}>
       <img
-        className={`Image ${className}`}
-        src={imageSrc}
-        sizes={sizes || '100vw'}
+        className={`LazyImage ${className}`}
+        src={fullSrc}
+        srcSet={secSet}
+        // src={this.state.isIntersecting ? fullSrc : smallSrc}
+        // srcSet={this.state.isIntersecting ? secSet : ''}
+        sizes={'100vw'}
         onClick={onClick}
         alt={alt}
       />
+      // </Observer>
     )
   }
 }
@@ -93,78 +113,3 @@ Image.propTypes = {
 }
 
 export default Image
-
-export const query = graphql`
-  fragment FluidImage on File {
-    publicURL
-    childImageSharp {
-      sizes(maxWidth: 2800, quality: 75) {
-        ...GatsbyImageSharpSizes_withWebp
-      }
-    }
-  }
-  fragment NoBlurImage on File {
-    publicURL
-    childImageSharp {
-      sizes(maxWidth: 2800, quality: 75) {
-        ...GatsbyImageSharpSizes_withWebp_noBase64
-      }
-    }
-  }
-  fragment TracedImage on File {
-    publicURL
-    childImageSharp {
-      sizes(maxWidth: 2800, quality: 75) {
-        ...GatsbyImageSharpSizes_withWebp_tracedSVG
-      }
-    }
-  }
-  fragment LargeImage on File {
-    publicURL
-    childImageSharp {
-      sizes(maxWidth: 1800, quality: 75) {
-        ...GatsbyImageSharpSizes_withWebp
-      }
-    }
-  }
-  fragment MediumImage on File {
-    publicURL
-    childImageSharp {
-      sizes(maxWidth: 800, quality: 75) {
-        ...GatsbyImageSharpSizes_withWebp
-      }
-    }
-  }
-  fragment SmallImage on File {
-    publicURL
-    childImageSharp {
-      sizes(maxWidth: 400, quality: 75) {
-        ...GatsbyImageSharpSizes_withWebp
-      }
-    }
-  }
-  fragment LargeImageFixed on File {
-    publicURL
-    childImageSharp {
-      resolutions(width: 1800, quality: 75) {
-        ...GatsbyImageSharpResolutions_withWebp
-      }
-    }
-  }
-  fragment MediumImageFixed on File {
-    publicURL
-    childImageSharp {
-      resolutions(width: 800, quality: 75) {
-        ...GatsbyImageSharpResolutions_withWebp
-      }
-    }
-  }
-  fragment SmallImageFixed on File {
-    publicURL
-    childImageSharp {
-      resolutions(width: 400, quality: 75) {
-        ...GatsbyImageSharpResolutions_withWebp
-      }
-    }
-  }
-`
