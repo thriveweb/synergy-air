@@ -2,14 +2,14 @@
 template: HomePage
 slug: ''
 title: ''
-featuredImage: images/home_header.jpg
+featuredImage: ''
 portals:
   - title: Classic Series
-    image: images/home_header.jpg
+    image: ''
     productLink: ''
     distLink: ''
   - title: Evolution Series
-    image: images/home_header.jpg
+    image: ''
     productLink: ''
     distLink: ''
 meta:
