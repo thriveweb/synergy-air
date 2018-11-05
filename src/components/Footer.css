@@ -7,6 +7,7 @@
 .footer p,
 .footer a {
   font-size: 1.5rem;
+  margin-bottom: 0;
 }
 
 .footer {
@@ -17,6 +18,10 @@
 .footer .top {
   padding: 4rem 0;
   line-height: 4rem;
+}
+
+.footer form {
+  margin-top: 1rem;
 }
 
 .footer .wide {

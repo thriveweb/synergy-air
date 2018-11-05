@@ -209,20 +209,20 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: 'content/pages/blog.md'
-        label: 'Blog Page'
-        name: 'blog-page'
+      # Products Index
+
+      - file: 'content/pages/products.md'
+        label: 'Products Page'
+        name: 'products-page'
         fields:
           - {
               label: Template,
               name: template,
               widget: hidden,
-              default: BlogIndex,
+              default: ProductIndex,
             }
-          - { label: Slug, name: slug, widget: hidden, default: 'blog' }
+          - { label: Slug, name: slug, widget: hidden, default: 'products' }
           - { label: Title, name: title, widget: string }
-          - { label: Featured Image, name: featuredImage, widget: image }
-          - { label: Subtitle, name: subtitle, widget: markdown }
           - label: 'Meta'
             required: false
             name: 'meta'
@@ -249,24 +249,42 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-  - name: infoPages
-    label: Info Page
+  # Single Products
+
+  - name: products
+    label: Products
     editor:
       preview: true
-    folder: content/infoPages
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    folder: content/products
     create: true # Allow users to create new documents in this collection
     fields:
       - {
           label: Template,
           name: template,
           widget: hidden,
-          default: DefaultPage,
+          default: SingleProduct,
         }
-      - { label: Slug, name: slug, widget: string }
-      - { label: Title, name: title, widget: string }
-      - { label: Featured Image, name: featuredImage, widget: image }
-      - { label: Body, name: body, widget: markdown }
+      - { label: Title, name: productTitle, widget: string }
+      - { label: Image, name: productImage, widget: string }
+      - { label: Overview, name: overview, widget: markdown }
+
+      - {
+          label: Slider,
+          name: productSlider,
+          widget: image,
+          required: false,
+          options: { media_library: { config: { multiple: true } } },
+        }
+
+      - {
+        label: Downloads,
+        name: downloads,
+        widget: list,
+        fields:
+          - { label: Download Title, name: title, widget: string }
+          - { label: Download Link, name: link, widget: file }
+        }
+
       - label: 'Meta'
         required: false
         name: 'meta'
@@ -288,41 +306,24 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-  - name: posts
-    label: Post
+  - name: infoPages
+    label: Info Page
     editor:
       preview: true
-    folder: content/posts
+    folder: content/infoPages
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - { label: Template, name: template, widget: hidden, default: SinglePost }
-      - { label: Title, name: title, widget: string }
-      - label: 'Status'
-        name: 'status'
-        widget: 'select'
-        options: ['Published', 'Featured', 'Draft']
-        default: 'Published'
-      - { label: Date / Order, name: date, widget: date }
+    fields:
       - {
-          label: Featured Image,
-          name: featuredImage,
-          widget: image,
-          required: false,
+          label: Template,
+          name: template,
+          widget: hidden,
+          default: DefaultPage,
         }
-      - { label: Excerpt, name: excerpt, widget: text }
-      - { label: Content, name: body, widget: markdown }
-      - label: 'Categories'
-        name: 'categories'
-        widget: 'list'
-        required: false
-        fields:
-          - label: 'Category'
-            name: 'category'
-            widget: 'relation'
-            collection: 'postCategories'
-            searchFields: ['title']
-            valueField: 'title'
+      - { label: Slug, name: slug, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Featured Image, name: featuredImage, widget: image }
+      - { label: Body, name: body, widget: markdown }
       - label: 'Meta'
         required: false
         name: 'meta'
