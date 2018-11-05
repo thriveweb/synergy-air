@@ -19,7 +19,7 @@ class Image extends React.Component {
   // }
 
   checkIfIsLocalSrc(src) {
-    if (typeof src === 'String' && src.includes('ucarecdn.com')) return false
+    if (typeof src === 'string' && src.includes('ucarecdn.com')) return false
     return true
   }
 
@@ -41,17 +41,17 @@ class Image extends React.Component {
     /* create source set for images */
     if (!isLocalImg) {
       secSet = `
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/320x/320.jpg 320w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/450x/450.jpg 450w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/640x/640.jpg 640w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/750x/750.jpg 750w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/800x/800.jpg 800w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/900x/900.jpg 900w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/1000x/1000x-/quality/lightest/1000.jpg 1000w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/1200x/1200x-/quality/lightest/1200.jpg 1200w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/1500x/1500x-/quality/lightest/1500.jpg 1500w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/1600x/1600x-/quality/lightest/1600.jpg 16000w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/2000x/2000x-/quality/lightest/2000.jpg 2000w`
+      ${src}-/progressive/yes/-/format/auto/-/scale_crop/320x320/-/320x.jpg 320w,
+      ${src}-/progressive/yes/-/format/auto/-/scale_crop/450x450/-/450x.jpg 450w,
+      ${src}-/progressive/yes/-/format/auto/-/scale_crop/640x640/-/640x.jpg 640w,
+      ${src}-/progressive/yes/-/format/auto/-/scale_crop/750x750/-/750x.jpg 750w,
+      ${src}-/progressive/yes/-/format/auto/-/scale_crop/800x800/-/800x.jpg 800w,
+      ${src}-/progressive/yes/-/format/auto/-/scale_crop/900x900/-/900x.jpg 900w,
+      ${src}-/progressive/yes/-/format/auto/-/scale_crop/1000x1000/-/quality/lightest/1000.jpg 1000w,
+      ${src}-/progressive/yes/-/format/auto/-/scale_crop/1200x1200/-/quality/lightest/1200.jpg 1200w,
+      ${src}-/progressive/yes/-/format/auto/-/scale_crop/1500x1500/-/quality/lightest/1500.jpg 1500w,
+      ${src}-/progressive/yes/-/format/auto/-/scale_crop/1600x1600/-/quality/lightest/1600.jpg 16000w,
+      ${src}-/progressive/yes/-/format/auto/-/scale_crop/2000x2000/-/quality/lightest/2000.jpg 2000w`
     }
 
     /* add resolutions options for inline images */
