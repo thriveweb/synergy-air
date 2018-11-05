@@ -73,6 +73,60 @@ collections: # A list of collections the CMS should be able to edit
                   widget: boolean,
                   required: false,
                 }
+
+      - file: 'content/pages/about.md'
+        label: 'About Page'
+        name: 'about-page'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: AboutPage,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: 'about' }
+          - { label: Title, name: title, widget: string }
+          - {
+            label: About Section,
+            name: section1,
+            widget: object,
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Content, name: content, widget: markdown }
+            }
+          - {
+            label: Gallery Section,
+            name: slider,
+            widget: list,
+            fields:
+              - { label: Image, name: image, widget: image }
+            }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
+
       - file: 'content/pages/contact.md'
         label: 'Contact Page'
         name: 'contact-page'
@@ -164,49 +218,6 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Title, name: title, widget: string }
           - { label: Featured Image, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
-          - label: 'Meta'
-            required: false
-            name: 'meta'
-            widget: 'object'
-            fields:
-              - { label: Title, name: title, widget: string, required: false }
-              - {
-                  label: Description,
-                  name: description,
-                  widget: text,
-                  required: false,
-                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
-                }
-              - {
-                  label: Canonical Link,
-                  name: canonicalLink,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Noindex,
-                  name: noindex,
-                  widget: boolean,
-                  required: false,
-                }
-
-      - file: 'content/pages/about.md'
-        label: 'About Page'
-        name: 'about-page'
-        fields:
-          - {
-              label: Template,
-              name: template,
-              widget: hidden,
-              default: AboutPage,
-            }
-          - { label: Slug, name: slug, widget: hidden, default: 'about' }
-          - { label: Title, name: title, widget: string }
-          - { label: Featured Images, name: featuredImage, widget: image }
-          - { label: Subtitle, name: subtitle, widget: markdown }
-          - { label: Section 1, name: section1, widget: markdown }
-          - { label: Section 2, name: section2, widget: markdown }
-          - { label: Test Image, name: testImage, widget: image }
           - label: 'Meta'
             required: false
             name: 'meta'
