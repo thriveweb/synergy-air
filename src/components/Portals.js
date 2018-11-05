@@ -9,7 +9,7 @@ export default ({ portals }) => (
     {portals.map((item, index) => (
       <div className="half" key={index}>
         <div className="item">
-          <Link to={item.productLink} className="absolute">
+          <Link to={item.productLink} className="absolute link">
             <div className="details">
               <h3>
                 <strong>Synergy Air</strong> {item.title}
@@ -17,7 +17,12 @@ export default ({ portals }) => (
               <h5>View Products</h5>
             </div>
           </Link>
-          <Image src={item.image} alt={item.title} />
+          <Image
+            src={item.image}
+            alt={item.title}
+            className="cover"
+            resolutions="large"
+          />
         </div>
 
         <Link to={item.distLink} className="button">
