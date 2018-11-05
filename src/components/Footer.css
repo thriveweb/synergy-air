@@ -4,6 +4,11 @@
   font-weight: 100;
 }
 
+.footer p,
+.footer a {
+  font-size: 1.5rem;
+}
+
 .footer {
   width: 100%;
   background: black;
@@ -14,17 +19,22 @@
   line-height: 4rem;
 }
 
-.footer .top .wide {
+.footer .wide {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.footer .wide {
+  width: 100%;
+}
+
 .footer .bottom {
-  font-size: 1.2rem;
   background: #202020;
   line-height: 0;
   padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 900px) {

@@ -24,7 +24,8 @@ export default ({ slider }) => {
       <Swiper {...params}>
         {slider.map((item, index) => (
           <div key={`item${index}`}>
-            <Image src={item.image} resolution="small" alt="" />
+            {console.log(item)}
+            <Image src={item} resolution="small" alt="" />
           </div>
         ))}
       </Swiper>

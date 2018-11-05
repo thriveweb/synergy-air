@@ -31,7 +31,9 @@ export default ({ globalSettings, socialSettings }) => (
     </div>
     <div className="bottom">
       <div className="wide">
-        <div className="taLeft">© 2018 Synergy Air</div>
+        <div className="taLeft">
+          <p>© 2018 Synergy Air</p>
+        </div>
         <div className="taRight">
           Site by <a href="https://thriveweb.com.au">Thrive</a>
         </div>
