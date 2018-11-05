@@ -4,11 +4,11 @@ import Link from 'gatsby-link'
 import Image from './Image'
 import './ProductCard.css'
 
-const ProductCard = ({ slug, productTitle, productImage, ...props }) => (
+const ProductCard = ({ slug, title, image, ...props }) => (
   <Link to={slug} className={`product-card relative`} {...props}>
-    <Image resolutions="medium" src={productImage} alt={productTitle} />
+    <Image resolutions="medium" src={image} alt={title} />
     <div className="clear" />
-    <p>{productTitle}</p>
+    <p>{title}</p>
   </Link>
 )
 

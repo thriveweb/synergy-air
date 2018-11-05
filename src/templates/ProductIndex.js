@@ -11,7 +11,8 @@ import ProductCard from '../components/ProductCard.js'
 export const ProductIndexTemplate = ({
   title,
   products = [],
-  featuredImage
+  featuredImage,
+  singleProduct
 }) => (
   <main className="products">
     <Helmet>
@@ -23,7 +24,7 @@ export const ProductIndexTemplate = ({
     <section>
       <div className="wide flex">
         {products.map((product, index) => (
-          <ProductCard key={index} {...product} />
+          <ProductCard key={index} {...products} />
         ))}
       </div>
     </section>
@@ -64,7 +65,9 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            productTitle
+            singleProduct {
+              overview
+            }
           }
         }
       }
