@@ -2,14 +2,14 @@
 template: HomePage
 slug: ''
 title: Synergy Air
-featuredImage: 'https://ucarecdn.com/b21b9069-78c7-4cea-8ce4-8275c423fd9b~1/nth/0/'
+featuredImage: 'https://ucarecdn.com/6f60e597-9fc3-45c2-8447-9f997b24e878~1/nth/0/'
 portals:
   - distLink: ''
-    image: 'https://ucarecdn.com/73909e03-3450-43e6-a3ae-a16f8fb8d5fd~1/nth/0/'
+    image: 'https://ucarecdn.com/8ce72696-eaf5-4e17-8795-0ef178c5ed8b~1/nth/0/'
     productLink: ''
     title: Classic Series
   - distLink: ''
-    image: 'https://ucarecdn.com/9cf49a28-2e31-44e7-bbce-c9cdd9d37bd0~1/nth/0/'
+    image: 'https://ucarecdn.com/10298c14-505e-4838-91a9-aabcf3bf4fb3~1/nth/0/'
     productLink: ''
     title: Evolution Series
 meta:
