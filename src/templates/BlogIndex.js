@@ -56,7 +56,7 @@ export const BlogIndexTemplate = ({
 // Export Default BlogIndex for front-end
 const BlogIndex = ({ data }) => (
   <Layout>
-    {/* <BlogIndexTemplate
+    <BlogIndexTemplate
       {...data.page}
       {...data.page.fields}
       {...data.page.frontmatter}
@@ -70,65 +70,65 @@ const BlogIndex = ({ data }) => (
         ...post.node.frontmatter,
         ...post.node.fields
       }))}
-    /> */}
+    />
   </Layout>
 )
 
 export default BlogIndex
 
-// export const pageQuery = graphql`
-//   ## Query for BlogIndex data
-//   ## Use GraphiQL interface (http://localhost:8000/___graphql)
-//   ## $id is processed via gatsby-node.js
-//   ## query name must be unique to this file
-//   query BlogIndex($id: String!) {
-//     page: markdownRemark(id: { eq: $id }) {
-//       fields {
-//         contentType
-//       }
-//       frontmatter {
-//         title
-//         excerpt
-//         template
-//         subtitle
-//         featuredImage
-//       }
-//     }
-//
-//     posts: allMarkdownRemark(
-//       filter: { fields: { contentType: { eq: "posts" } } }
-//       sort: { order: DESC, fields: [frontmatter___date] }
-//     ) {
-//       edges {
-//         node {
-//           excerpt
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//             categories {
-//               category
-//             }
-//             featuredImage
-//           }
-//         }
-//       }
-//     }
-//     postCategories: allMarkdownRemark(
-//       filter: { fields: { contentType: { eq: "postCategories" } } }
-//       sort: { order: ASC, fields: [frontmatter___title] }
-//     ) {
-//       edges {
-//         node {
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  ## Query for BlogIndex data
+  ## Use GraphiQL interface (http://localhost:8000/___graphql)
+  ## $id is processed via gatsby-node.js
+  ## query name must be unique to this file
+  query BlogIndex($id: String!) {
+    page: markdownRemark(id: { eq: $id }) {
+      fields {
+        contentType
+      }
+      frontmatter {
+        title
+        excerpt
+        template
+        subtitle
+        featuredImage
+      }
+    }
+
+    posts: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "posts" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            categories {
+              category
+            }
+            featuredImage
+          }
+        }
+      }
+    }
+    postCategories: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "postCategories" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`

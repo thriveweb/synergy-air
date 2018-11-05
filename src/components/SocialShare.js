@@ -2,7 +2,7 @@ import React from 'react'
 
 import './SocialShare.css'
 
-export default ({}) => (
+export default () => (
   <ul className="share-buttons">
     <p>Share:</p>
     <li>
