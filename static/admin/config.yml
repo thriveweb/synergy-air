@@ -96,16 +96,11 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Content, name: content, widget: markdown }
               - { label: Image, name: image, widget: image }
 
-          # - {
-          #     label: Slider,
-          #     name: slider,
-          #     widget: image,
-          #     options: { media_library: { config: { multiple: true } } },
-          #   }
           - {
               label: Slider,
               name: imageSlider,
               widget: image,
+              required: false,
               options: { media_library: { config: { multiple: true } } },
             }
 
