@@ -7,6 +7,20 @@ import PropTypes from 'prop-types'
 import './Image.css'
 
 class Image extends React.Component {
+  imageSizes = [
+    '320',
+    '450',
+    '640',
+    '750',
+    '800',
+    '900',
+    '1000',
+    '1200',
+    '1500',
+    '1600',
+    '2000'
+  ] // image siezes used for image source sets
+
   // state = {
   //   isIntersecting: false
   // }
@@ -40,18 +54,9 @@ class Image extends React.Component {
     const isLocalImg = this.checkIfIsLocalSrc(src)
     /* create source set for images */
     if (!isLocalImg) {
-      secSet = `
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/320x320/-/320x.jpg 320w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/450x450/-/450x.jpg 450w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/640x640/-/640x.jpg 640w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/750x750/-/750x.jpg 750w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/800x800/-/800x.jpg 800w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/900x900/-/900x.jpg 900w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/1000x1000/-/quality/lightest/1000.jpg 1000w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/1200x1200/-/quality/lightest/1200.jpg 1200w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/1500x1500/-/quality/lightest/1500.jpg 1500w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/1600x1600/-/quality/lightest/1600.jpg 16000w,
-      ${src}-/progressive/yes/-/format/auto/-/scale_crop/2000x2000/-/quality/lightest/2000.jpg 2000w`
+      secSet = this.imageSizes.map(size => {
+        return `${src}-/progressive/yes/-/format/auto/-/preview/${size}x${size}/-/quality/lightest/${size}.jpg ${size}w`
+      })
     }
 
     /* add resolutions options for inline images */

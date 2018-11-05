@@ -2,7 +2,7 @@
 template: HomePage
 slug: ''
 title: Synergy Air
-featuredImage: 'https://ucarecdn.com/6f60e597-9fc3-45c2-8447-9f997b24e878~1/nth/0/'
+featuredImage: 'https://ucarecdn.com/b4271a36-8366-4469-9d58-9858d025bf95~1/nth/0/'
 portals:
   - distLink: ''
     image: 'https://ucarecdn.com/8ce72696-eaf5-4e17-8795-0ef178c5ed8b~1/nth/0/'
