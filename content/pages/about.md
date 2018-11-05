@@ -11,9 +11,6 @@ section1:
     Etiam mollis vehicula elit et interdum. Donec blandit, velit sit amet
     viverra eleifend, risus urna rutrum quis feugiat eros turpis sed turpis.
   title: Lorem ipsum sit dolor
-imageSlider:
-  - 'https://ucarecdn.com/250176c9-b0b3-4c46-b417-fa3062094443~3/nth/0/'
-  - 'https://ucarecdn.com/250176c9-b0b3-4c46-b417-fa3062094443~3/nth/1/'
-  - 'https://ucarecdn.com/250176c9-b0b3-4c46-b417-fa3062094443~3/nth/2/'
+imageSlider: ''
 ---
 
