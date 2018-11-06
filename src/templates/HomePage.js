@@ -1,14 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import PageHeader from '../components/PageHeader'
+import HeaderVideo from '../components/HeaderVideo'
 import Layout from '../components/Layout'
 import Portals from '../components/Portals'
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({ title, featuredImage, portals }) => (
   <main className="Home">
-    <PageHeader large title={title} backgroundImage={featuredImage} />
+    <HeaderVideo source="/images/synergy-video.mp4?mute=1" title={title} />
 
     {portals && (
       <section>
