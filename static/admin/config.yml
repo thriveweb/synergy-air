@@ -34,7 +34,7 @@ collections: # A list of collections the CMS should be able to edit
 
           - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
-          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Header Video, name: headerVideo, widget: file }
 
           - label: 'Portals'
             name: 'portals'

@@ -2,7 +2,7 @@
 template: HomePage
 slug: ''
 title: Innovative Air Displacement Ergometers
-featuredImage: 'https://ucarecdn.com/d243aa19-d79d-4f00-82ee-f08a6ea55266~1/nth/0/'
+headerVideo: '/images/synergy-video.mp4?mute=1'
 portals:
   - distLink: '/distributors/classic'
     image: 'https://ucarecdn.com/3b11e400-0e28-403a-9715-0c9480284b48~1/nth/0/'

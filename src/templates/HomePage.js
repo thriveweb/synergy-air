@@ -6,9 +6,9 @@ import Layout from '../components/Layout'
 import Portals from '../components/Portals'
 
 // Export Template for use in CMS preview
-export const HomePageTemplate = ({ title, featuredImage, portals }) => (
+export const HomePageTemplate = ({ title, headerVideo, portals }) => (
   <main className="Home">
-    <HeaderVideo source="/images/synergy-video.mp4?mute=1" title={title} />
+    <HeaderVideo source={headerVideo} title={title} />
 
     {portals && (
       <section>
@@ -39,7 +39,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        featuredImage
+        headerVideo
         portals {
           title
           image
