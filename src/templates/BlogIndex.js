@@ -88,7 +88,6 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        excerpt
         template
         subtitle
         featuredImage
@@ -97,7 +96,7 @@ export const pageQuery = graphql`
 
     posts: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "posts" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: DESC, fields: [frontmatter___title] }
     ) {
       edges {
         node {

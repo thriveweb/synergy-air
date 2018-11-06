@@ -135,18 +135,13 @@ export const pageQuery = graphql`
       frontmatter {
         title
         template
-        subtitle
-        date
-        categories {
-          category
-        }
         featuredImage
       }
     }
 
     allPosts: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "posts" } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: DESC, fields: [frontmatter___title] }
     ) {
       edges {
         node {
