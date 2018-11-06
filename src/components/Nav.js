@@ -7,8 +7,8 @@ import './Nav.css'
 
 export default class Nav extends Component {
   state = {
-    active: false,
-    dropdownActive: false
+    active: false
+    // dropdownActive: false
   }
 
   // Nav hamburger
@@ -16,13 +16,19 @@ export default class Nav extends Component {
   handleLinkClick = () => this.state.active && this.handleMenuToggle()
 
   // Nav dropdown
-  handleDropdownToggle = () =>
-    this.setState({ dropdownActive: !this.state.dropdownActive })
-  handleDropdownClick = () =>
-    this.state.dropdownActive && this.handleDropdownToggle()
+  // handleDropdownToggle = () =>
+  //   this.setState({ dropdownActive: !this.state.dropdownActive })
+  // handleDropdownClick = () =>
+  //   this.state.dropdownActive && this.handleDropdownToggle()
+
+  handleMobileList = item => {
+    this.setState({
+      [`navList${item}`]: !this.state[`navList${item}`]
+    })
+  }
 
   render() {
-    const { active, dropdownActive } = this.state
+    const { active } = this.state
 
     const NavLink = ({ className, children, ...props }) => (
       <Link
@@ -42,11 +48,12 @@ export default class Nav extends Component {
           </Link>
           <div className="nav-links">
             <NavLink to="/about/">About</NavLink>
-            <div className="NavLink has-children relative">
-              <div
-                className={`${dropdownActive ? 'dropdown-active' : ''}`}
-                onClick={this.handleDropdownToggle}
-              >
+            <div
+              className={`NavLink has-children relative ${
+                this.state['navListproducts'] ? 'dropdown-active' : ''
+              }`}
+            >
+              <div onClick={() => this.handleMobileList('products')}>
                 Products
                 <ul className="sub-menu">
                   <li>
@@ -62,11 +69,12 @@ export default class Nav extends Component {
                 </ul>
               </div>
             </div>
-            <div className="NavLink has-children relative">
-              <div
-                className={`${dropdownActive ? 'dropdown-active' : ''}`}
-                onClick={this.handleDropdownToggle}
-              >
+            <div
+              className={`NavLink has-children relative ${
+                this.state['navListdistributors'] ? 'dropdown-active' : ''
+              }`}
+            >
+              <div onClick={() => this.handleMobileList('distributors')}>
                 Distributors
                 <ul className="sub-menu">
                   <li>

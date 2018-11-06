@@ -175,7 +175,7 @@
     display: none !important;
   }
 
-  .nav .has-children .dropdown-active .sub-menu {
+  .nav .has-children.dropdown-active .sub-menu {
     display: block !important;
   }
 
