@@ -1,0 +1,50 @@
+.distributors .flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.distributors .item {
+  width: 33.33%;
+  border-right: 1px solid #e5e5e5;
+  padding: 0 4rem;
+  margin-bottom: 5rem;
+}
+
+.distributors .item:last-of-type {
+  border-right: 0;
+}
+
+.distributors .item:nth-child(3n) {
+  border-right: 0;
+}
+
+.distributors .item p,
+.distributors .item p a {
+  color: black;
+}
+
+.distributors .item a {
+  color: var(--primary);
+}
+
+.distributors .item p span {
+  font-weight: 600;
+  padding-right: 2rem;
+}
+
+@media screen and (max-width: 950px) {
+  .distributors .item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .distributors .item {
+    width: 100%;
+    text-align: center;
+    padding: 4rem 0;
+    border-right: 0;
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
