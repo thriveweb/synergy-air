@@ -20,7 +20,11 @@ export default ({ globalSettings, socialSettings }) => (
         </div>
 
         <div className="logo">
-          <Image src="/images/logo_footer.svg" resolutions="small" />
+          <Image
+            src="/images/logo_footer.svg"
+            resolutions="small"
+            alt="Synergy Air"
+          />
         </div>
 
         <div className="taRight">

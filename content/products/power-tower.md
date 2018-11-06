@@ -22,8 +22,6 @@ productSlider:
   - 'https://ucarecdn.com/b07810f5-4701-40a1-beec-76881d1248a3~3/nth/1/'
   - 'https://ucarecdn.com/b07810f5-4701-40a1-beec-76881d1248a3~3/nth/2/'
 downloads:
-  link: >-
-    https://synergyfitness.com.au/wp-content/uploads/2018/10/SynergyAIR-CVT-and-Air-Displacement-Dynamics.pdf
+  link: 'https://ucarecdn.com/9c156c85-ee69-4e76-a975-5f2ec12b6e58/'
   name: SynergyAir CTV and Air Displacement Dynamics
 ---
-

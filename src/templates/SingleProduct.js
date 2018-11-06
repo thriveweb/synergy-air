@@ -42,13 +42,8 @@ export const SingleProductTemplate = ({
           <div className="product-slider half">
             <Swiper {...params}>
               {productSlider.map((slide, index) => (
-                <div>
-                  <Image
-                    src={slide}
-                    resolutions="small"
-                    alt={title + index}
-                    class="contain"
-                  />
+                <div key={title + '_' + index}>
+                  <Image src={slide} resolutions="small" alt={title} />
                 </div>
               ))}
             </Swiper>
@@ -66,7 +61,13 @@ export const SingleProductTemplate = ({
           {downloads && (
             <div className="downloads">
               <h4>Downloads</h4>
-              <a href={downloads.link}>{downloads.name}</a>
+              <a
+                href={downloads.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {downloads.name}
+              </a>
             </div>
           )}
 

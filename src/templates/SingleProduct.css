@@ -64,7 +64,7 @@
   border: 1px solid #e5e5e5;
 }
 
-.product-slider .LazyImage.contain {
+.product-slider img.LazyImage {
   height: 100%;
   width: 100%;
   object-fit: contain;
