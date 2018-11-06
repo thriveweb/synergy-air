@@ -5,20 +5,12 @@ import _format from 'date-fns/format'
 import { Link, graphql } from 'gatsby'
 import { ChevronLeft } from 'react-feather'
 
-import Content from '../components/Content'
-import Image from '../components/Image'
+// import Content from '../components/Content'
+// import Image from '../components/Image'
 import Layout from '../components/Layout'
-import './SinglePost.css'
+// import './SinglePost.css'
 
-export const SinglePostTemplate = ({
-  title,
-  date,
-  featuredImage,
-  body,
-  nextPostURL,
-  prevPostURL,
-  categories = []
-}) => (
+export const SinglePostTemplate = ({ title }) => (
   <main>
     <article
       className="SinglePost section light"
@@ -29,7 +21,7 @@ export const SinglePostTemplate = ({
         <title>{title}</title>
       </Helmet>
 
-      {featuredImage && (
+      {/* {featuredImage && (
         <Image
           background
           className="SinglePost--BackgroundImage"
@@ -62,7 +54,6 @@ export const SinglePostTemplate = ({
                     className="SinglePost--Meta--Category"
                   >
                     {cat.category}
-                    {/* Add a comma on all but last category */}
                     {index !== categories.length - 1 ? ',' : ''}
                   </span>
                 ))}
@@ -99,7 +90,7 @@ export const SinglePostTemplate = ({
             )}
           </div>
         </div>
-      </div>
+      </div> */}
     </article>
   </main>
 )
@@ -109,61 +100,61 @@ const SinglePost = ({ data, pageContext }) => {
   const { post, allPosts } = data
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
-    <Layout>
-      <SinglePostTemplate
-        {...post}
-        {...post.frontmatter}
-        body={post.html}
-        nextPostURL={_get(thisEdge, 'next.fields.slug')}
-        prevPostURL={_get(thisEdge, 'previous.fields.slug')}
-      />
-    </Layout>
+    // <Layout>
+    //   <SinglePostTemplate
+    //     {...post}
+    //     {...post.frontmatter}
+    //     body={post.html}
+    //     nextPostURL={_get(thisEdge, 'next.fields.slug')}
+    //     prevPostURL={_get(thisEdge, 'previous.fields.slug')}
+    //   />
+    // </Layout>
   )
 }
 
 export default SinglePost
 
-export const pageQuery = graphql`
-  ## Query for SinglePost data
-  ## Use GraphiQL interface (http://localhost:8000/___graphql)
-  ## $id is processed via gatsby-node.js
-  ## query name must be unique to this file
-  query SinglePost($id: String!) {
-    post: markdownRemark(id: { eq: $id }) {
-      html
-      id
-      frontmatter {
-        title
-        template
-        featuredImage
-      }
-    }
-
-    allPosts: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "posts" } } }
-      sort: { order: DESC, fields: [frontmatter___title] }
-    ) {
-      edges {
-        node {
-          id
-        }
-        next {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-          }
-        }
-        previous {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   ## Query for SinglePost data
+//   ## Use GraphiQL interface (http://localhost:8000/___graphql)
+//   ## $id is processed via gatsby-node.js
+//   ## query name must be unique to this file
+//   query SinglePost($id: String!) {
+//     post: markdownRemark(id: { eq: $id }) {
+//       html
+//       id
+//       frontmatter {
+//         title
+//         template
+//         featuredImage
+//       }
+//     }
+//
+//     allPosts: allMarkdownRemark(
+//       filter: { fields: { contentType: { eq: "posts" } } }
+//       sort: { order: DESC, fields: [frontmatter___title] }
+//     ) {
+//       edges {
+//         node {
+//           id
+//         }
+//         next {
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             title
+//           }
+//         }
+//         previous {
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             title
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
