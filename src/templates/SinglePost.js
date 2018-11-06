@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
-import _get from 'lodash/get'
-import _format from 'date-fns/format'
-import { Link, graphql } from 'gatsby'
-import { ChevronLeft } from 'react-feather'
+// import _get from 'lodash/get'
+// import _format from 'date-fns/format'
+// import { Link, graphql } from 'gatsby'
+// import { ChevronLeft } from 'react-feather'
 
 // import Content from '../components/Content'
 // import Image from '../components/Image'
-import Layout from '../components/Layout'
+// import Layout from '../components/Layout'
 // import './SinglePost.css'
 
 export const SinglePostTemplate = ({ title }) => (
@@ -96,21 +96,21 @@ export const SinglePostTemplate = ({ title }) => (
 )
 
 // Export Default SinglePost for front-end
-const SinglePost = ({ data, pageContext }) => {
-  const { post, allPosts } = data
-  const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
-  return (
-    // <Layout>
-    //   <SinglePostTemplate
-    //     {...post}
-    //     {...post.frontmatter}
-    //     body={post.html}
-    //     nextPostURL={_get(thisEdge, 'next.fields.slug')}
-    //     prevPostURL={_get(thisEdge, 'previous.fields.slug')}
-    //   />
-    // </Layout>
-  )
-}
+// const SinglePost = ({ data, pageContext }) => {
+// const { post, allPosts } = data
+// const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
+// return (
+// <Layout>
+//   <SinglePostTemplate
+//     {...post}
+//     {...post.frontmatter}
+//     body={post.html}
+//     nextPostURL={_get(thisEdge, 'next.fields.slug')}
+//     prevPostURL={_get(thisEdge, 'previous.fields.slug')}
+//   />
+// </Layout>
+// )
+// }
 
 export default SinglePost
 
