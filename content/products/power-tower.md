@@ -22,6 +22,7 @@ productSlider:
   - 'https://ucarecdn.com/b07810f5-4701-40a1-beec-76881d1248a3~3/nth/1/'
   - 'https://ucarecdn.com/b07810f5-4701-40a1-beec-76881d1248a3~3/nth/2/'
 downloads:
-  link: 'https://ucarecdn.com/9c156c85-ee69-4e76-a975-5f2ec12b6e58/'
+  link: 'https://ucarecdn.com/a16c4d70-e85c-46a9-8b47-846600b8d40e/'
   name: SynergyAir CTV and Air Displacement Dynamics
 ---
+
