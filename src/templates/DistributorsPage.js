@@ -28,14 +28,14 @@ export const DistributorsPageTemplate = ({ title, distributors }) => (
             {item.phone && (
               <p>
                 <span>P</span>
-                <a href={item.phone}>{item.phone}</a>
+                <a href={`tel:${item.phone}`}>{item.phone}</a>
               </p>
             )}
 
             {item.email && (
               <p>
                 <span>E</span>
-                <a href={item.email}>{item.email}</a>
+                <a href={`mailto:${item.email}`}>{item.email}</a>
               </p>
             )}
 
