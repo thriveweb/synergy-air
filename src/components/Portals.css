@@ -51,3 +51,10 @@
     margin: auto;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .portals .item,
+  .portals .item .Image {
+    height: 20rem;
+  }
+}

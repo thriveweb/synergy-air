@@ -32,3 +32,17 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@media screen and (max-width: 1120px) {
+  .InstagramFeed--EmptyPost {
+    width: calc(100% / 4);
+    padding: calc(50% / 4) 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .InstagramFeed--EmptyPost {
+    width: calc(100% / 2);
+    padding: calc(50% / 2) 0;
+  }
+}
