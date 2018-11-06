@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 //import 'isomorphic-fetch'
-import 'whatwg-fetch'
+// import 'whatwg-fetch'
 
 import Image from '../components/Image'
 import './InstagramFeed.css'
