@@ -2,11 +2,17 @@ import React from 'react'
 
 import Image from './Image'
 import SubscribeForm from './SubscribeForm'
+import InstagramFeed from './InstagramFeed'
 import './SubscribeForm.css'
 import './Footer.css'
 
 export default ({ globalSettings, socialSettings }) => (
   <div className="footer">
+    <InstagramFeed
+      instagramUrl="https://instagram.com/thrivegoldcoast/"
+      count="7"
+    />
+
     <div className="top">
       <div className="wide">
         <div className="taLeft">
