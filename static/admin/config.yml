@@ -125,6 +125,99 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
+      # Distributors Page
+
+      - file: 'content/pages/distributors.md'
+        label: 'Distributors Page'
+        name: 'distributors-page'
+        fields:
+          - label: 'Template'
+            name: 'template'
+            widget: 'hidden'
+            default: 'DistributorsPage'
+
+          - { label: Slug, name: slug, widget: hidden, default: 'distributors' }
+          - { label: Title, name: title, widget: string }
+
+          - label: 'Distributors'
+            name: 'distributors'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Phone, name: phone, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Address, name: address, widget: string }
+              - { label: Website, name: website, widget: string }
+
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
+
+      # Contact Page
+
+      - file: 'content/pages/contact.md'
+        label: 'Contact Page'
+        name: 'contact-page'
+        fields:
+          - label: 'Template'
+            name: 'template'
+            widget: 'hidden'
+            default: 'ContactPage'
+
+          - { label: Slug, name: slug, widget: hidden, default: 'contact' }
+          - { label: Title, name: title, widget: string }
+          - { label: Address, name: address, widget: string }
+          - { label: Phone, name: phone, widget: string }
+          - { label: Email, name: email, widget: string }
+
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
+
       # Product Index
 
       - file: 'content/pages/products.md'
@@ -165,122 +258,6 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: 'content/pages/contact.md'
-        label: 'Contact Page'
-        name: 'contact-page'
-        fields:
-          - {
-              label: Template,
-              name: template,
-              widget: hidden,
-              default: ContactPage,
-            }
-          - { label: Slug, name: slug, widget: hidden, default: 'contact' }
-          - { label: Title, name: title, widget: string }
-          - {
-              label: Featured Image,
-              name: featuredImage,
-              widget: image,
-              options:
-                { media_library: { config: { imageShrink: 2600x2600 } } },
-            }
-          - { label: Subtitle, name: subtitle, widget: markdown }
-          - { label: Body, name: body, widget: markdown }
-          - { label: Address, name: address, widget: text }
-          - { label: Phone, name: phone, widget: string }
-          - { label: Email Address, name: email, widget: string }
-          - name: locations
-            label: locations
-            widget: list
-            fields:
-              - {
-                  name: mapLink,
-                  label: mapLink,
-                  widget: string,
-                  required: false,
-                  default: '',
-                }
-              - {
-                  name: lat,
-                  label: latitude,
-                  widget: string,
-                  required: false,
-                  delete: false,
-                  default: '',
-                }
-              - {
-                  name: lng,
-                  label: longitude,
-                  widget: string,
-                  required: false,
-                  delete: false,
-                  default: '',
-                }
-          - label: 'Meta'
-            required: false
-            name: 'meta'
-            widget: 'object'
-            fields:
-              - { label: Title, name: title, widget: string, required: false }
-              - {
-                  label: Description,
-                  name: description,
-                  widget: text,
-                  required: false,
-                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
-                }
-              - {
-                  label: Canonical Link,
-                  name: canonicalLink,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Noindex,
-                  name: noindex,
-                  widget: boolean,
-                  required: false,
-                }
-
-  - name: infoPages
-    label: Info Page
-    editor:
-      preview: true
-    folder: content/infoPages
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    create: true # Allow users to create new documents in this collection
-    fields:
-      - {
-          label: Template,
-          name: template,
-          widget: hidden,
-          default: DefaultPage,
-        }
-      - { label: Slug, name: slug, widget: string }
-      - { label: Title, name: title, widget: string }
-      - { label: Featured Image, name: featuredImage, widget: image }
-      - { label: Body, name: body, widget: markdown }
-      - label: 'Meta'
-        required: false
-        name: 'meta'
-        widget: 'object'
-        fields:
-          - { label: Title, name: title, widget: string, required: false }
-          - {
-              label: Description,
-              name: description,
-              widget: text,
-              required: false,
-              pattern: ['.{,300}', 'Must not exceed 300 characters'],
-            }
-          - {
-              label: Canonical Link,
-              name: canonicalLink,
-              widget: string,
-              required: false,
-            }
-          - { label: Noindex, name: noindex, widget: boolean, required: false }
-
   # Single Products
 
   - name: products
@@ -291,12 +268,10 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {
-          label: Template,
-          name: template,
-          widget: hidden,
-          default: SingleProduct,
-        }
+      - label: 'Template'
+        name: 'template'
+        widget: 'hidden'
+        default: 'SingleProduct'
 
       - { label: Title, name: title, widget: string }
       - { label: Featured Image, name: featuredImage, widget: image }
@@ -337,32 +312,24 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-  - name: postCategories
-    label: Post Category
+  # Product Categories
+
+  - name: productCategories
+    label: Product Category
     editor:
       preview: false
-    folder: content/postCategories
+    folder: content/productCategories
     slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: Template, name: template, widget: hidden, default: BlogIndex }
+      - label: 'Template'
+        name: 'template'
+        widget: 'hidden'
+        default: 'ProductIndex'
+
       - { label: Title, name: title, widget: string }
-      - { label: Subtitle, name: subtitle, widget: string, required: false }
-      - {
-          label: Featured Image,
-          name: featuredImage,
-          widget: image,
-          required: false,
-        }
-      # - label: "Meta"
-      #   required: false
-      #   name: "meta"
-      #   widget: "object"
-      #   fields:
-      #     - {label: Title, name: title, widget: string, required: false}
-      #     - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
-      #     - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
-      #     - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+  # Settings
 
   - name: 'settings'
     label: 'Settings'
