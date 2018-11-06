@@ -310,11 +310,11 @@ collections: # A list of collections the CMS should be able to edit
 
       - label: 'Downloads'
         name: 'downloads'
-        widget: 'list'
+        widget: 'object'
         required: false
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Link, name: link, widget: string }
+          - { label: Name, name: name, widget: string, required: false }
+          - { label: Link, name: link, widget: file, required: false }
 
       - label: 'Meta'
         required: false
