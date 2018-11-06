@@ -6,11 +6,11 @@ import PageHeader from '../components/PageHeader'
 import Layout from '../components/Layout.js'
 import Image from '../components/Image'
 import Content from '../components/Content'
-// import ImageSlider from '../components/ImageSlider'
+import ImageSlider from '../components/ImageSlider'
 import './AboutPage.css'
 
 // Export Template for use in CMS preview
-export const AboutPageTemplate = ({ title, section1 }) => (
+export const AboutPageTemplate = ({ title, section1, imageSlider }) => (
   <main className="about">
     <Helmet>
       <title>{title}</title>
@@ -32,7 +32,7 @@ export const AboutPageTemplate = ({ title, section1 }) => (
       </div>
 
       <div className="slider wide">
-        {/* <ImageSlider slider={imageSlider} /> */}
+        <ImageSlider slider={imageSlider} />
       </div>
     </section>
   </main>
@@ -57,6 +57,7 @@ export const pageQuery = graphql`
           content
           image
         }
+        imageSlider
       }
     }
   }
