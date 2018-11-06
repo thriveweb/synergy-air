@@ -1,6 +1,6 @@
 ---
 template: SingleProduct
-slug: 'evolution/power-climber'
+slug: 'power-climber'
 title: Power Climber
 featuredImage: 'https://ucarecdn.com/3228553c-959d-4e07-b159-28321f8eda44~4/nth/0/'
 overview: |-

@@ -1,6 +1,6 @@
 ---
 template: SingleProduct
-slug: 'classic/power-tower'
+slug: 'power-tower'
 title: Power Tower
 featuredImage: 'https://ucarecdn.com/3228553c-959d-4e07-b159-28321f8eda44~4/nth/0/'
 overview: |-
