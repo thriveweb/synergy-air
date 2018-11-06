@@ -16,9 +16,7 @@ import '../components/ProductSlider.css'
 // Export Template for use in CMS preview
 export const SingleProductTemplate = ({
   title,
-  categories,
-  products,
-  singleProduct,
+  overview,
   productSlider,
   downloads,
   params = {
@@ -58,7 +56,7 @@ export const SingleProductTemplate = ({
           <div className="divide" />
 
           <h4>Overview</h4>
-          <Content src={singleProduct.overview} />
+          <Content src={overview} />
           <div className="divide" />
 
           <h4>Downloads</h4>
@@ -94,12 +92,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        categories {
-          category
-        }
-        singleProduct {
-          overview
-        }
+        overview
         productSlider
         downloads {
           title

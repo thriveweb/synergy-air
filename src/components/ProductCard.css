@@ -4,15 +4,15 @@ a.product-card {
   display: block;
 }
 
-.product-card .Image img {
+.product-card img.LazyImage {
   transition: 0.5s all ease;
 }
 
-a.product-card:hover .Image img {
+a.product-card:hover img.LazyImage {
   opacity: 0.6 !important;
 }
 
-a.product-card .Image img {
+a.product-card img.LazyImage {
   border: 1px solid #e5e5e5;
   object-fit: contain;
   height: 35rem;

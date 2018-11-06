@@ -4,16 +4,11 @@ import { graphql } from 'gatsby'
 
 import PageHeader from '../components/PageHeader'
 import Layout from '../components/Layout.js'
-import ProductCard from '../components/ProductCard.js'
+import ProductSection from '../components/ProductSection.js'
 // import './ProductIndex.css'
 
 // Export Template for use in CMS preview
-export const ProductIndexTemplate = ({
-  title,
-  products = [],
-  featuredImage,
-  singleProduct
-}) => (
+export const ProductIndexTemplate = ({ title, products = [] }) => (
   <main className="products">
     <Helmet>
       <title>{title}</title>
@@ -22,11 +17,7 @@ export const ProductIndexTemplate = ({
     <PageHeader title={title} />
 
     <section>
-      <div className="wide flex">
-        {products.map((product, index) => (
-          <ProductCard key={index} {...products} />
-        ))}
-      </div>
+      <ProductSection products={products} />
     </section>
   </main>
 )
@@ -65,9 +56,8 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            singleProduct {
-              overview
-            }
+            title
+            featuredImage
           }
         }
       }

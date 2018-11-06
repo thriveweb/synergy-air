@@ -291,40 +291,31 @@ collections: # A list of collections the CMS should be able to edit
     slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - label: 'Template'
-        name: 'template'
-        widget: 'hidden'
-        default: 'SingleProduct'
-
-      - { label: Title, name: productTitle, widget: string }
-      - { label: Overview, name: overview, widget: markdown }
-      - { label: Image, name: productImage, widget: image }
-
-      - label: 'Status'
-        name: 'status'
-        widget: 'select'
-        options: ['Published', 'Featured', 'Draft']
-        default: 'Published'
-      - { label: Date / Order, name: date, widget: date }
       - {
-          label: Featured Image,
-          name: featuredImage,
-          widget: image,
-          required: false,
+          label: Template,
+          name: template,
+          widget: hidden,
+          default: SingleProduct,
         }
-      - { label: Excerpt, name: excerpt, widget: text }
-      - { label: Content, name: body, widget: markdown }
-      - label: 'Categories'
-        name: 'categories'
+
+      - { label: Title, name: title, widget: string }
+      - { label: Featured Image, name: featuredImage, widget: image }
+      - { label: Overview, name: overview, widget: markdown }
+
+      - label: 'Image Slider'
+        name: 'productSlider'
+        widget: 'image'
+        required: false
+        options: { media_library: { config: { multiple: true } } }
+
+      - label: 'Downloads'
+        name: 'downloads'
         widget: 'list'
         required: false
         fields:
-          - label: 'Category'
-            name: 'category'
-            widget: 'relation'
-            collection: 'postCategories'
-            searchFields: ['title']
-            valueField: 'title'
+          - { label: Title, name: title, widget: string }
+          - { label: Link, name: link, widget: string }
+
       - label: 'Meta'
         required: false
         name: 'meta'
