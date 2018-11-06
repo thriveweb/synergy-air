@@ -11,7 +11,6 @@ import Image from '../components/Image'
 import SocialShare from '../components/SocialShare'
 
 import './SingleProduct.css'
-import '../components/ProductSlider.css'
 
 // Export Template for use in CMS preview
 export const SingleProductTemplate = ({
