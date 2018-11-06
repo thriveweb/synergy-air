@@ -50,10 +50,14 @@ export default class Nav extends Component {
                 Products
                 <ul className="sub-menu">
                   <li>
-                    <Link to="/classic/">Classic Series</Link>
+                    <Link to="/product-categories/classic/">
+                      Classic Series
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/evolution/">Evolution Series</Link>
+                    <Link to="/product-categories/evolution/">
+                      Evolution Series
+                    </Link>
                   </li>
                 </ul>
               </div>

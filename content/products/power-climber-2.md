@@ -3,7 +3,7 @@ template: SingleProduct
 title: Power Climber
 featuredImage: 'https://ucarecdn.com/1d08fb7f-e9a1-4be3-b3f8-bea5f04804d4/'
 categories:
-  - category: Evolution Series
+  - category: Classic Series
 overview: >-
   * Patented integrated continuous variable transmission
 

@@ -3,7 +3,7 @@ template: SingleProduct
 title: Power Tower
 featuredImage: 'https://ucarecdn.com/949e8654-56b7-4df2-a1d3-c532b70648c3/'
 categories:
-  - category: Evolution Series
+  - category: Classic Series
 overview: |-
   * Patented integrated continuous variable transmission
   * Potential power range of up to one million watts at

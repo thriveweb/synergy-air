@@ -36,14 +36,14 @@ class ProductSection extends React.Component {
             ))}
           </div>
         )}
-        {/* {showLoadMore &&
+        {showLoadMore &&
           visibleProducts.length < products.length && (
-            <div className="taCenter">
+            <div className="load-more taCenter">
               <button className="button" onClick={this.increaseLimit}>
                 {loadMoreTitle}
               </button>
             </div>
-          )} */}
+          )}
       </div>
     )
   }

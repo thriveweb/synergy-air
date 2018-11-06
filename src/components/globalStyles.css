@@ -150,6 +150,10 @@ h5 {
   text-align: right;
 }
 
+.taCenter {
+  text-align: center;
+}
+
 section {
   padding: 10rem 0;
 }

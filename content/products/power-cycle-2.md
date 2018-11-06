@@ -3,7 +3,7 @@ template: SingleProduct
 title: Power Cycle
 featuredImage: 'https://ucarecdn.com/2bdc53e2-3fe9-4c17-9f64-0d436e63f7ac/'
 categories:
-  - category: Evolution Series
+  - category: Classic Series
 overview: |-
   Patented integrated continuous variable transmission
   - Weighted air displacement turbine with gearing ratio of 1:6 to 1:24

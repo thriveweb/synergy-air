@@ -2,7 +2,7 @@ a.product-card {
   width: calc(100% / 4 - 2rem);
   height: auto;
   display: block;
-  margin: 1rem;
+  margin: 1rem 1rem 3rem 1rem;
 }
 
 .product-card img.LazyImage {

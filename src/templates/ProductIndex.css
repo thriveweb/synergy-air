@@ -2,3 +2,7 @@
   display: flex;
   flex-wrap: wrap !important;
 }
+
+.product-section .load-more {
+  margin-top: 4rem;
+}

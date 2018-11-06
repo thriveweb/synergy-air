@@ -3,7 +3,7 @@ template: SingleProduct
 title: Cycle Ergometer
 featuredImage: 'https://ucarecdn.com/6c3738ba-b860-4213-862c-b917e91b3557/'
 categories:
-  - category: Evolution Series
+  - category: Classic Series
 overview: |-
   * Weighted air displacement turbine with gearing ratio of 1:13
   * 2370 watts @ 150 rpm

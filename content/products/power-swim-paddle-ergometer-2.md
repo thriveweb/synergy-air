@@ -3,7 +3,7 @@ template: SingleProduct
 title: Power Swim / Paddle Ergometer
 featuredImage: 'https://ucarecdn.com/2b3c7586-a4a5-4069-8756-508ee2f019ff/'
 categories:
-  - category: Evolution Series
+  - category: Classic Series
 overview: |-
   * Patented integrated continuous variable transmission
   * Swimming and Board Paddling exercise options

@@ -3,7 +3,7 @@ template: SingleProduct
 title: Bionic Cycle
 featuredImage: 'https://ucarecdn.com/9ba5603e-a70e-4c13-8bfd-255bb9e89abd/'
 categories:
-  - category: Evolution Series
+  - category: Classic Series
 overview: |-
   * Weighted air displacement turbine with gearing ratio of 1:17
   * 4350 watts @ 150 rpm
