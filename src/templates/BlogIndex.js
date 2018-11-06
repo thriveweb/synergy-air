@@ -3,8 +3,8 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import PageHeader from '../components/PageHeader'
-import PostSection from '../components/PostSection'
-import PostCategoriesNav from '../components/PostCategoriesNav'
+// import PostSection from '../components/PostSection'
+// import PostCategoriesNav from '../components/PostCategoriesNav'
 import Layout from '../components/Layout'
 
 // Export Template for use in CMS preview
