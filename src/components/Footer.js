@@ -39,7 +39,9 @@ export default ({ globalSettings, socialSettings }) => (
           <p>© 2018 Synergy Air</p>
         </div>
         <div className="taRight">
-          Site by <a href="https://thriveweb.com.au">Thrive</a>
+          <p>
+            Site by <a href="https://thriveweb.com.au">Thrive</a>
+          </p>
         </div>
       </div>
     </div>
