@@ -44,7 +44,12 @@ export const SingleProductTemplate = ({
             <Swiper {...params}>
               {productSlider.map((slide, index) => (
                 <div>
-                  <Image src={slide} resolutions="small" alt={title + index} />
+                  <Image
+                    src={slide}
+                    resolutions="small"
+                    alt={title + index}
+                    class="contain"
+                  />
                 </div>
               ))}
             </Swiper>
