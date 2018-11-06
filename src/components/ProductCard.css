@@ -1,7 +1,8 @@
 a.product-card {
-  width: 20%;
-  height: 40rem;
+  width: calc(100% / 4 - 2rem);
+  height: auto;
   display: block;
+  margin: 1rem;
 }
 
 .product-card img.LazyImage {
@@ -15,11 +16,35 @@ a.product-card:hover img.LazyImage {
 a.product-card img.LazyImage {
   border: 1px solid #e5e5e5;
   object-fit: contain;
-  height: 35rem;
+  height: 40rem;
   width: 100%;
 }
 
 a.product-card p {
   text-align: center;
+  font-size: 1.6rem;
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 950px) {
+  a.product-card img.LazyImage {
+    height: 28rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  a.product-card {
+    width: calc(100% / 2 - 2rem);
+  }
+
+  a.product-card img.LazyImage {
+    height: 28rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  a.product-card {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
 }

@@ -68,10 +68,10 @@ export const SingleProductTemplate = ({
               >
                 {downloads.name}
               </a>
+              <div className="divide" />
             </div>
           )}
 
-          <div className="divide" />
           <SocialShare />
         </div>
       </div>
