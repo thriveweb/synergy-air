@@ -62,7 +62,7 @@ export const SingleProductTemplate = ({
           {downloads && (
             <div className="downloads">
               <h4>Downloads</h4>
-              <a href={downloads.link.publicURL}>{downloads.name}</a>
+              <a href={downloads.link}>{downloads.name}</a>
             </div>
           )}
 
@@ -98,9 +98,7 @@ export const pageQuery = graphql`
         productSlider
         downloads {
           name
-          link {
-            publicURL
-          }
+          link
         }
       }
     }
