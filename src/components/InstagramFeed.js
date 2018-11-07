@@ -25,15 +25,6 @@ export default class InstagramFeed extends Component {
     })
   }
 
-  componentWillUnmount() {
-    const parsed = this.parseInstagramUrl(this.props.instagramUrl)
-    const instagramUsername = parsed ? parsed[1] : ''
-    if (instagramUsername) this.fetchInstagram(instagramUsername)
-    this.setState({
-      instagramUsername
-    })
-  }
-
   parseInstagramUrl = string =>
     string.match(/(?:https?:\/\/)(?:www.)?instagram.com\/([\w\d_-]+)\/?/i)
 

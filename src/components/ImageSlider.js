@@ -22,12 +22,13 @@ export default ({ slider }) => {
   return (
     <div className="image-slider">
       <Swiper {...params}>
-        {slider.map((item, index) => (
-          <div key={`item${index}`}>
-            {console.log(item)}
-            <Image src={item} resolution="small" alt="" />
-          </div>
-        ))}
+        {!!slider &&
+          slider.length &&
+          slider.map((item, index) => (
+            <div key={`item${index}`}>
+              <Image src={item} resolution="small" alt={'image-' + index} />
+            </div>
+          ))}
       </Swiper>
     </div>
   )

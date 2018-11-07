@@ -7,7 +7,6 @@ import { AboutPageTemplate } from '../templates/AboutPage'
 import { DistributorsPageTemplate } from '../templates/DistributorsPage'
 import { ContactPageTemplate } from '../templates/ContactPage'
 import { DefaultPageTemplate } from '../templates/DefaultPage'
-import { ProductIndexTemplate } from '../templates/ProductIndex'
 import { SingleProductTemplate } from '../templates/SingleProduct'
 
 if (
@@ -31,7 +30,7 @@ CMS.registerPreviewTemplate('classic-distributors-page', ({ entry }) => (
   <DistributorsPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('about-page', ({ entry }) => (
-  <AboutPageTemplate {...entry.toJS().data} />
+  <AboutPageTemplate {...entry.toJS().data} isPreview />
 ))
 CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
   <ContactPageTemplate {...entry.toJS().data} />

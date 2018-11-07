@@ -10,7 +10,12 @@ import ImageSlider from '../components/ImageSlider'
 import './AboutPage.css'
 
 // Export Template for use in CMS preview
-export const AboutPageTemplate = ({ title, section1, imageSlider }) => (
+export const AboutPageTemplate = ({
+  title,
+  section1,
+  imageSlider,
+  isPreview
+}) => (
   <main className="about">
     <Helmet>
       <title>{title}</title>
@@ -31,9 +36,13 @@ export const AboutPageTemplate = ({ title, section1, imageSlider }) => (
         </div>
       </div>
 
-      <div className="slider wide">
-        <ImageSlider slider={imageSlider} />
-      </div>
+      {/* Use isPreview to fix CMS error #188 */}
+
+      {!isPreview && (
+        <div className="slider wide">
+          {!!imageSlider && <ImageSlider slider={imageSlider} />}
+        </div>
+      )}
     </section>
   </main>
 )
