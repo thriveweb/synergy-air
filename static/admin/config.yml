@@ -409,12 +409,6 @@ collections: # A list of collections the CMS should be able to edit
               widget: text,
               required: false,
             }
-          - {
-              label: Instagram Url,
-              name: instagramUrl,
-              widget: string,
-              required: false,
-            }
           - label: Social Media Card
             name: socialMediaCard
             widget: object
