@@ -128,7 +128,7 @@ collections: # A list of collections the CMS should be able to edit
       # Classic Distributors Page
 
       - file: 'content/pages/classic.md'
-        label: 'Classic Distributors Page'
+        label: Classic Distributors Page
         name: 'classic-distributors-page'
         fields:
           - label: 'Template'
@@ -183,7 +183,7 @@ collections: # A list of collections the CMS should be able to edit
       # Evolution Distributors Page
 
       - file: 'content/pages/classic.md'
-        label: 'Evolution Distributors Page'
+        label: Evolution Distributors Page
         name: 'evolution-distributors-page'
         fields:
           - label: 'Template'
