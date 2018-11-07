@@ -283,6 +283,7 @@ collections: # A list of collections the CMS should be able to edit
       - file: 'content/pages/products.md'
         label: 'Products Page'
         name: 'products-page'
+        widegt: hidden
         fields:
           - label: 'Template'
             name: 'template'

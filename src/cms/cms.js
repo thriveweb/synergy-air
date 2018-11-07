@@ -4,10 +4,11 @@ import './cms-utils'
 
 import { HomePageTemplate } from '../templates/HomePage'
 import { AboutPageTemplate } from '../templates/AboutPage'
+import { DistributorsPageTemplate } from '../templates/DistributorsPage'
 import { ContactPageTemplate } from '../templates/ContactPage'
 import { DefaultPageTemplate } from '../templates/DefaultPage'
-import { BlogIndexTemplate } from '../templates/BlogIndex'
-import { SinglePostTemplate } from '../templates/SinglePost'
+import { ProductIndexTemplate } from '../templates/ProductIndex'
+import { SingleProductTemplate } from '../templates/SingleProduct'
 
 if (
   window.location.hostname === 'localhost' &&
@@ -23,6 +24,12 @@ if (
 CMS.registerPreviewTemplate('home-page', ({ entry }) => (
   <HomePageTemplate {...entry.toJS().data} />
 ))
+CMS.registerPreviewTemplate('evolution-distributors-page', ({ entry }) => (
+  <DistributorsPageTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('classic-distributors-page', ({ entry }) => (
+  <DistributorsPageTemplate {...entry.toJS().data} />
+))
 CMS.registerPreviewTemplate('about-page', ({ entry }) => (
   <AboutPageTemplate {...entry.toJS().data} />
 ))
@@ -32,9 +39,6 @@ CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
 CMS.registerPreviewTemplate('infoPages', ({ entry }) => (
   <DefaultPageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('blog-page', ({ entry }) => (
-  <BlogIndexTemplate {...entry.toJS().data} />
-))
-CMS.registerPreviewTemplate('posts', ({ entry }) => (
-  <SinglePostTemplate {...entry.toJS().data} />
+CMS.registerPreviewTemplate('products', ({ entry }) => (
+  <SingleProductTemplate {...entry.toJS().data} />
 ))
