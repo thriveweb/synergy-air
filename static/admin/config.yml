@@ -146,7 +146,7 @@ collections: # A list of collections the CMS should be able to edit
 
           - label: 'Distributors'
             name: 'distributors'
-            widget: 'object'
+            widget: 'list'
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Phone, name: phone, widget: string }
@@ -201,7 +201,7 @@ collections: # A list of collections the CMS should be able to edit
 
           - label: 'Distributors'
             name: 'distributors'
-            widget: 'object'
+            widget: 'list'
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Phone, name: phone, widget: string }
