@@ -13,8 +13,8 @@ const HeaderVideo = ({ source, title }) => {
         className="video"
         preload="auto"
         playsInline=""
-        autoPlay="true"
-        muted="true"
+        autoPlay={true}
+        muted={true}
         loop="loop"
       >
         <source src={source} type="video/mp4" />

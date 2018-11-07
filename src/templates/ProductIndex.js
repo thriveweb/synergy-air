@@ -36,7 +36,7 @@ export const ProductIndexTemplate = ({
 }
 
 const ProductIndex = ({ data }) => {
-  const { page, products, productCategories } = data
+  const { page, products } = data
   return (
     <Layout>
       <ProductIndexTemplate

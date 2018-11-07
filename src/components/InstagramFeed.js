@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-//import 'isomorphic-fetch'
-// import 'whatwg-fetch'
+import 'isomorphic-fetch'
+import 'whatwg-fetch'
 
 import Image from '../components/Image'
 import './InstagramFeed.css'
@@ -16,7 +16,7 @@ export default class InstagramFeed extends Component {
     instagramUsername: ''
   }
 
-  UNSAFE_componentWillMount() {
+  componentWillMount() {
     const parsed = this.parseInstagramUrl(this.props.instagramUrl)
     const instagramUsername = parsed ? parsed[1] : ''
     if (instagramUsername) this.fetchInstagram(instagramUsername)
@@ -72,7 +72,9 @@ export default class InstagramFeed extends Component {
           href={this.props.instagramUrl}
           rel="noopener noreferrer"
           target="_blank"
-        />
+        >
+          {' '}
+        </a>
       </div>
     )
   }

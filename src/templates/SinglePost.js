@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 // import _get from 'lodash/get'
 // import _format from 'date-fns/format'
@@ -97,7 +97,7 @@ export const SinglePostTemplate = ({ title }) => (
 
 // Export Default SinglePost for front-end
 const SinglePost = ({ data, pageContext }) => {
-  const { post, allPosts } = data
+  const { post } = data
   // const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
   return (
     <Layout>

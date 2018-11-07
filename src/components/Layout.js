@@ -17,6 +17,7 @@ export default ({ children }) => {
           settingsYaml {
             siteTitle
             siteDescription
+            instagramUrl
             headerScripts
             socialMediaCard {
               image
@@ -25,8 +26,13 @@ export default ({ children }) => {
         }
       `}
       render={data => {
-        const { siteTitle, siteUrl, socialMediaCard, headerScripts } =
-          data.settingsYaml || {}
+        const {
+          siteTitle,
+          siteUrl,
+          socialMediaCard,
+          headerScripts,
+          instagramUrl
+        } = data.settingsYaml || {}
         return (
           <Fragment>
             <Helmet
@@ -66,7 +72,7 @@ export default ({ children }) => {
 
             <Fragment>{children}</Fragment>
 
-            <Footer />
+            <Footer instagramUrl={instagramUrl} />
           </Fragment>
         )
       }}

@@ -6,9 +6,9 @@ import InstagramFeed from './InstagramFeed'
 import './SubscribeForm.css'
 import './Footer.css'
 
-export default ({ globalSettings }) => (
+export default ({ globalSettings, socialSettings, instagramUrl }) => (
   <div className="footer">
-    <InstagramFeed instagramUrl={globalSettings.instagramUrl} count="7" />
+    <InstagramFeed instagramUrl={instagramUrl} count="7" />
 
     <div className="top">
       <div className="wide">
