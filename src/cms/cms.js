@@ -23,10 +23,10 @@ if (
 CMS.registerPreviewTemplate('home-page', ({ entry }) => (
   <HomePageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('evolution-distributors-page', ({ entry }) => (
+CMS.registerPreviewTemplate('distributors-page', ({ entry }) => (
   <DistributorsPageTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('classic-distributors-page', ({ entry }) => (
+CMS.registerPreviewTemplate('distributors', ({ entry }) => (
   <DistributorsPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('about-page', ({ entry }) => (
