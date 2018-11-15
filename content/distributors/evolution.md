@@ -1,6 +1,5 @@
 ---
 template: DistributorsPage
-slug: distributors/evolution
 title: Evolution Distributors
 distributors:
   - title: Distributor name

@@ -1,6 +1,5 @@
 ---
 template: DistributorsPage
-slug: distributors/classic
 title: Classic Distributors
 distributors:
   - title: Distributor name

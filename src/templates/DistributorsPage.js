@@ -58,12 +58,12 @@ export const DistributorsPageTemplate = ({ title, distributors }) => (
   </main>
 )
 
-const DistributorsPage = ({ data: { page } }) => (
+const DistributorsPage = ({ data: { distributor } }) => (
   <Layout>
     <DistributorsPageTemplate
-      {...page}
-      {...page.frontmatter}
-      body={page.html}
+      {...distributor}
+      {...distributor.frontmatter}
+      body={distributor.html}
     />
   </Layout>
 )
@@ -72,8 +72,9 @@ export default DistributorsPage
 
 export const pageQuery = graphql`
   query DistributorsPage($id: String!) {
-    page: markdownRemark(id: { eq: $id }) {
+    distributor: markdownRemark(id: { eq: $id }) {
       html
+      id
       frontmatter {
         title
         distributors {
@@ -85,5 +86,19 @@ export const pageQuery = graphql`
         }
       }
     }
+
+    # page: markdownRemark(id: { eq: $id }) {
+    #   html
+    #   frontmatter {
+    #     title
+    #     distributors {
+    #       title
+    #       phone
+    #       email
+    #       address
+    #       website
+    #     }
+    #   }
+    # }
   }
 `
