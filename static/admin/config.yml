@@ -283,7 +283,7 @@ collections: # A list of collections the CMS should be able to edit
   # Distributors
 
   - name: distributors
-    label: Distributors Page
+    label: Distributors
     editor:
       preview: false
     folder: content/distributors
