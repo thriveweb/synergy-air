@@ -3,18 +3,12 @@ template: AboutPage
 slug: about
 title: About us
 section1:
-  content: >-
-    Integer dolor augue, facilisis vehicula consectetur sit amet, feugiat sit
-    amet purus. Pellentesque consequat non mauris et vestibulum. Donec blandit,
-    arcu vel pharetra aliquam, metus nisi volutpat magna, eget bibendum ex
-    turpis scelerisque orci. Suspendisse vehicula eleifend nibh eget aliquam.
-    Etiam mollis vehicula elit et interdum. Donec blandit, velit sit amet
-    viverra eleifend, risus urna rutrum quis feugiat eros turpis sed turpis.
-  image: 'https://ucarecdn.com/e9e7f024-7857-4b40-a003-e0bced980807/'
-  title: Lorem ipsum sit dolor
+  content: "Synergy Fitness has had a long and proud history since 1976 as world leaders in the innovation, design and evolution of commercial strength and conditioning equipment. The Synergy group was the very first to design and manufacture pin loaded machines with compound converging/diverging arc, unilateral movement technology, for its upper body pin loaded machines, as well as many other original and innovative designs, including for example, the Seated Leg Curl machine and the first multi-function dual adjustable pulley system with adjustable back rest support, all designed already way back in the early 1990’s. These original, very simple, yet highly effective revolutionary designs still form the basis of our Synergy strength line and are now essentially copied in various forms by most other leading manufacturers around the world.\n\n\n\nIn 2012 Synergy began development on more uniquely innovative patented products, including Bilateral Stability Control technology on our pin loaded strength products, as well as a whole new range of Air Displacement Ergometers, married with continuous variable transmission (CVT) and unilateral crank technology. These unique features effectively cater for the entire spectrum of physical conditioning needs, from rehabilitation clients to world class athletes. No other brand in the world is able to offer Bilateral Stability Control or unilateral movement across an entire range of strength and cardio products. Synergy Fitness has also developed uniquely efficient and effective simulated altitude training systems, making hypoxic training now a truly viable commercial fitness training facility option.\n\n\n\nSynergy’s dominant market position, within the fitness and sports industries has been earned on the basis of quality product lines, dedicated service and consultancy support, together with unmatched industry knowledge and expertise, resulting in unprecedented customer satisfaction. Our company has its own salaried, product support team, as well as a first class distributor network, established to offer prompt and efficient customer service. Our Cloud based international service software system enables Synergy Fitness to provide fast and efficient equipment repairs and preventative maintenance programs.\r\n\n\r\n\nSynergy Fitness is dedicated to the ongoing development of health, fitness and wellness models for industry professionals by increasing awareness, providing education and sponsoring ground breaking research on evolutionary physical performance and wellness concepts."
+  image: 'https://ucarecdn.com/e71480e7-794c-4f5e-9003-215080b93db1/'
+  title: Synergy fitness
 imageSlider:
-  - 'https://ucarecdn.com/fea4c08f-1cd4-436e-b9b3-50095bedc6d5~4/nth/0/'
-  - 'https://ucarecdn.com/fea4c08f-1cd4-436e-b9b3-50095bedc6d5~4/nth/1/'
-  - 'https://ucarecdn.com/fea4c08f-1cd4-436e-b9b3-50095bedc6d5~4/nth/2/'
-  - 'https://ucarecdn.com/fea4c08f-1cd4-436e-b9b3-50095bedc6d5~4/nth/3/'
+  - 'https://ucarecdn.com/c31a091a-b0cd-4db9-9b78-06f765d6e4a3~3/nth/0/'
+  - 'https://ucarecdn.com/c31a091a-b0cd-4db9-9b78-06f765d6e4a3~3/nth/1/'
+  - 'https://ucarecdn.com/c31a091a-b0cd-4db9-9b78-06f765d6e4a3~3/nth/2/'
 ---
+
