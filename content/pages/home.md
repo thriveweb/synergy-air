@@ -1,7 +1,7 @@
 ---
 template: HomePage
 slug: ''
-title: Innovative Air Displacement Ergometers
+title: SynergyAIR FITNESS
 headerVideo: 'https://ucarecdn.com/38ce7d04-32bd-42a4-94f8-63754aecf94b/'
 portals:
   - distLink: /distributors/classic
