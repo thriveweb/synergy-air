@@ -12,7 +12,6 @@ overview: |-
   * Total body arm/leg cycling
   * Lower body cycling
   * Upper body chest press and row action
-  * hello
 productSlider:
   - 'https://ucarecdn.com/838ab94c-f3e9-43ef-ad5b-d325fb4cf14c~2/nth/0/'
   - 'https://ucarecdn.com/838ab94c-f3e9-43ef-ad5b-d325fb4cf14c~2/nth/1/'
