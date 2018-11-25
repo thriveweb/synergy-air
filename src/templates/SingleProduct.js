@@ -18,6 +18,7 @@ export const SingleProductTemplate = ({
   overview,
   productSlider,
   downloads,
+  isPreview,
   params = {
     slidesPerView: 1,
     pagination: {
@@ -38,19 +39,6 @@ export const SingleProductTemplate = ({
 
     <section>
       <div className="thin flex">
-        {!!isPreview &&
-          productSlider && (
-            <div className="product-slider half">
-              <Swiper {...params}>
-                {productSlider.map((slide, index) => (
-                  <div key={title + '_' + index}>
-                    <Image src={slide} resolutions="small" alt={title} />
-                  </div>
-                ))}
-              </Swiper>
-            </div>
-          )}
-
         <div className="half">
           <h5>{title}</h5>
           <div className="divide" />
@@ -108,6 +96,7 @@ export const pageQuery = graphql`
         }
       }
     }
+
     products: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "products" } } }
     ) {

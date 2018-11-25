@@ -242,6 +242,21 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Name, name: name, widget: string, required: false }
           - { label: Link, name: link, widget: file, required: false }
 
+      - label: 'Categories'
+        name: 'categories'
+        widget: 'list'
+        required: false
+        fields:
+          - {
+              label: Category,
+              name: category,
+              widget: select,
+              options: ['Classic Series', 'Evolution Series'],
+              collection: productCategories,
+              searchFields: ['title'],
+              valueField: title,
+            }
+
       - label: 'Meta'
         required: false
         name: 'meta'

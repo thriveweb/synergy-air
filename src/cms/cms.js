@@ -39,5 +39,5 @@ CMS.registerPreviewTemplate('infoPages', ({ entry }) => (
   <DefaultPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('products', ({ entry }) => (
-  <SingleProductTemplate {...entry.toJS().data} />
+  <SingleProductTemplate {...entry.toJS().data} isPreview />
 ))
