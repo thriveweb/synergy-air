@@ -61,19 +61,20 @@ export const SingleProductTemplate = ({
           <Content src={overview} />
           <div className="divide" />
 
-          {downloads && (
-            <div className="downloads">
-              <h4>Downloads</h4>
+          <div className="downloads">
+            <h4>Downloads</h4>
+            {downloads.map((item, index) => (
               <a
-                href={downloads.link}
+                href={item.link}
+                key={item.name + index}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {downloads.name}
+                {item.name}
               </a>
-              <div className="divide" />
-            </div>
-          )}
+            ))}
+            <div className="divide" />
+          </div>
 
           <SocialShare />
         </div>

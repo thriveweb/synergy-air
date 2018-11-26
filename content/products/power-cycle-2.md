@@ -12,8 +12,8 @@ productSlider:
   - 'https://ucarecdn.com/76e97105-145e-4308-ab8c-416f3aac849b~2/nth/0/'
   - 'https://ucarecdn.com/76e97105-145e-4308-ab8c-416f3aac849b~2/nth/1/'
 downloads:
-  link: 'https://ucarecdn.com/9c156c85-ee69-4e76-a975-5f2ec12b6e58/'
-  name: SynergyAir CTV and Air Displacement Dynamics
+  - link: 'https://ucarecdn.com/9c156c85-ee69-4e76-a975-5f2ec12b6e58/'
+    name: SynergyAir CTV and Air Displacement Dynamics
 categories:
   - category: Classic Series
 ---
