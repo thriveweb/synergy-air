@@ -2,28 +2,19 @@
 template: SingleProduct
 title: Power Tower
 featuredImage: 'https://ucarecdn.com/949e8654-56b7-4df2-a1d3-c532b70648c3/'
-categories:
-  - category: Evolution Series
-overview: |-
-  * Patented integrated continuous variable transmission
-  * Potential power range of up to one million watts at
-  * 150 step cycles per minute
-  * Automatic range of movement variability up to 65cm
-
-  Multiple operational modes, including, but not limited to:
-
-  * Total body climbing
-  * Lower body climbing/stepping (supported and unsupported)
-  * Upper body ‘hang pull’ and ‘push press’
-  * Upper body reciprocal and/or single arm ‘hang pull’ and ‘push press’
-  * Lower body reciprocal and/or one arm supported chest press and row
-  * Reciprocal calf press
-  * Deadlift and pushdown
+overview: "* Patented integrated continuous variable transmission\n* Potential power range of up to one million watts at\n* 150 step cycles per minute\n* Automatic range of movement variability up to 65cm\n\nMultiple operational modes, including, but not limited to:\n\n* Total body climbing\n* Lower body climbing/stepping (supported and unsupported)\n* Upper body ‘hang pull’ and ‘push press’\n* Upper body reciprocal and/or single arm ‘hang pull’ and ‘push press’\n* Lower body reciprocal and/or one arm supported chest press and row\n* Reciprocal calf press\n* Deadlift and pushdown\n\nDIMENSIONS\r\n\n• 2400 H x 1250 W x 900 L (mm)"
 productSlider:
-  - 'https://ucarecdn.com/b07810f5-4701-40a1-beec-76881d1248a3~3/nth/0/'
-  - 'https://ucarecdn.com/b07810f5-4701-40a1-beec-76881d1248a3~3/nth/1/'
-  - 'https://ucarecdn.com/b07810f5-4701-40a1-beec-76881d1248a3~3/nth/2/'
+  - 'https://ucarecdn.com/133c5537-cba2-4593-88a6-05119fca8585~7/nth/0/'
+  - 'https://ucarecdn.com/133c5537-cba2-4593-88a6-05119fca8585~7/nth/1/'
+  - 'https://ucarecdn.com/133c5537-cba2-4593-88a6-05119fca8585~7/nth/2/'
+  - 'https://ucarecdn.com/133c5537-cba2-4593-88a6-05119fca8585~7/nth/3/'
+  - 'https://ucarecdn.com/133c5537-cba2-4593-88a6-05119fca8585~7/nth/4/'
+  - 'https://ucarecdn.com/133c5537-cba2-4593-88a6-05119fca8585~7/nth/5/'
+  - 'https://ucarecdn.com/133c5537-cba2-4593-88a6-05119fca8585~7/nth/6/'
 downloads:
   link: 'https://ucarecdn.com/a16c4d70-e85c-46a9-8b47-846600b8d40e/'
   name: SynergyAir CTV and Air Displacement Dynamics
+categories:
+  - category: Evolution Series
 ---
+
