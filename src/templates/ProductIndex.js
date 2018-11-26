@@ -74,6 +74,7 @@ export const pageQuery = graphql`
     }
     products: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "products" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
     ) {
       edges {
         node {
@@ -86,6 +87,7 @@ export const pageQuery = graphql`
             categories {
               category
             }
+            order
           }
         }
       }

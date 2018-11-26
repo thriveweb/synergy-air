@@ -1,6 +1,7 @@
 ---
 template: SingleProduct
 title: Power Swim / Paddle Ergometer
+order: '6'
 featuredImage: 'https://ucarecdn.com/2b3c7586-a4a5-4069-8756-508ee2f019ff/'
 categories:
   - category: Classic Series

@@ -1,6 +1,7 @@
 ---
 template: SingleProduct
 title: Cycle Ergometer
+order: '0'
 featuredImage: 'https://ucarecdn.com/6c3738ba-b860-4213-862c-b917e91b3557/'
 categories:
   - category: Classic Series

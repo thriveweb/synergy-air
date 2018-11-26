@@ -1,6 +1,7 @@
 ---
 template: SingleProduct
 title: Power Tower
+order: '7'
 featuredImage: 'https://ucarecdn.com/949e8654-56b7-4df2-a1d3-c532b70648c3/'
 categories:
   - category: Classic Series

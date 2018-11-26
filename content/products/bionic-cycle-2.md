@@ -1,6 +1,7 @@
 ---
 template: SingleProduct
 title: Bionic Cycle
+order: '8'
 featuredImage: 'https://ucarecdn.com/9ba5603e-a70e-4c13-8bfd-255bb9e89abd/'
 overview: |-
   * Weighted air displacement turbine with gearing ratio of 1:17
@@ -21,4 +22,3 @@ downloads:
 categories:
   - category: Classic Series
 ---
-

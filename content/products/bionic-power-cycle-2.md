@@ -1,6 +1,7 @@
 ---
 template: SingleProduct
 title: Bionic Power Cycle
+order: '2'
 featuredImage: 'https://ucarecdn.com/79c5cffd-bb89-468a-9e04-f9190b53801c/'
 overview: |-
   * Patented integrated continuous variable transmission
@@ -21,4 +22,3 @@ downloads:
 categories:
   - category: Classic Series
 ---
-

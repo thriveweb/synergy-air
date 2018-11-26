@@ -1,6 +1,7 @@
 ---
 template: SingleProduct
 title: Mag Cycle
+order: '4'
 featuredImage: 'https://ucarecdn.com/6ea82cff-6517-4438-9c13-d4a1777461c3/'
 categories:
   - category: Classic Series
