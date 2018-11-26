@@ -1,9 +1,7 @@
 ---
 template: SingleProduct
 title: Power Climber
-featuredImage: 'https://ucarecdn.com/1d08fb7f-e9a1-4be3-b3f8-bea5f04804d4/'
-categories:
-  - category: Classic Series
+featuredImage: 'https://ucarecdn.com/a72788a1-aa08-4b03-aa51-e6b9b629536c/'
 overview: >-
   * Patented integrated continuous variable transmission
 
@@ -17,9 +15,12 @@ overview: >-
   style movement or alternatively anchor themselves during high load sprints and
   strength orientated movements
 productSlider:
-  - 'https://ucarecdn.com/9df731bb-7274-49d5-a4c1-d9be4dcfbabc~2/nth/0/'
-  - 'https://ucarecdn.com/9df731bb-7274-49d5-a4c1-d9be4dcfbabc~2/nth/1/'
+  - 'https://ucarecdn.com/dc59917d-6b1e-4350-b872-d54af7bd1a6a~2/nth/0/'
+  - 'https://ucarecdn.com/dc59917d-6b1e-4350-b872-d54af7bd1a6a~2/nth/1/'
 downloads:
   link: 'https://ucarecdn.com/5c9f57d8-28aa-4179-850a-c1ad81de14ae/'
   name: SynergyAir CTV and Air Displacement Dynamics
+categories:
+  - category: Classic Series
 ---
+

@@ -2,8 +2,6 @@
 template: SingleProduct
 title: Bionic Cycle
 featuredImage: 'https://ucarecdn.com/9ba5603e-a70e-4c13-8bfd-255bb9e89abd/'
-categories:
-  - category: Classic Series
 overview: |-
   * Weighted air displacement turbine with gearing ratio of 1:17
   * 4350 watts @ 150 rpm
@@ -20,4 +18,7 @@ productSlider:
 downloads:
   link: 'https://ucarecdn.com/79062c6e-0f94-4a51-a9a8-d3d96e5e7cce/'
   name: SynergyAir CTV and Air Displacement Dynamics
+categories:
+  - category: Classic Series
 ---
+
