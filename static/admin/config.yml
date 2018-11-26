@@ -225,6 +225,7 @@ collections: # A list of collections the CMS should be able to edit
         default: 'SingleProduct'
 
       - { label: Title, name: title, widget: string }
+      - { label: Order, name: order, widget: number }
       - { label: Featured Image, name: featuredImage, widget: image }
       - { label: Overview, name: overview, widget: markdown }
 

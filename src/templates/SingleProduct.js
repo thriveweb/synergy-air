@@ -39,9 +39,9 @@ export const SingleProductTemplate = ({
 
     <section>
       <div className="thin flex">
-        {!!isPreview &&
-          !!productSlider && (
-            <div className="product-slider half">
+        {!isPreview && (
+          <div className="product-slider half">
+            {!!productSlider && (
               <Swiper {...params}>
                 {productSlider.map((slide, index) => (
                   <div key={title + '_' + index}>
@@ -49,8 +49,9 @@ export const SingleProductTemplate = ({
                   </div>
                 ))}
               </Swiper>
-            </div>
-          )}
+            )}
+          </div>
+        )}
 
         <div className="half">
           <h5>{title}</h5>
