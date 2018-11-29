@@ -243,6 +243,14 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Name, name: name, widget: string, required: false }
           - { label: Link, name: link, widget: file, required: false }
 
+      - label: 'Video'
+        name: 'video'
+        widget: 'object'
+        required: false
+        fields:
+          - { label: Vimeo, name: vimeo, widget: string, required: false }
+          - { label: Youtube, name: youtube, widget: string, required: false }
+
       - label: 'Categories'
         name: 'categories'
         widget: 'list'

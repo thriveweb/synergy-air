@@ -18,6 +18,7 @@ export const SingleProductTemplate = ({
   overview,
   productSlider,
   downloads,
+  video,
   isPreview,
   params = {
     slidesPerView: 1,
@@ -79,6 +80,26 @@ export const SingleProductTemplate = ({
           <SocialShare />
         </div>
       </div>
+      <div className="thin">
+        {!!video.vimeo && (
+          <div className="vimeo">
+            <iframe
+              title={`vimeo + ${title}`}
+              src={`https://player.vimeo.com/video/${video.vimeo}`}
+              frameBorder="0"
+            />
+          </div>
+        )}
+        {!!video.youtube && (
+          <div className="youtube">
+            <iframe
+              title={`youtube + ${title}`}
+              src={`https://www.youtube.com/embed/${video.youtube}`}
+              frameborder="0"
+            />
+          </div>
+        )}
+      </div>
     </section>
   </main>
 )
@@ -108,6 +129,10 @@ export const pageQuery = graphql`
         downloads {
           name
           link
+        }
+        video {
+          vimeo
+          youtube
         }
       }
     }

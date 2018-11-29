@@ -13,6 +13,10 @@ imageSlider:
   - 'https://ucarecdn.com/fea4c08f-1cd4-436e-b9b3-50095bedc6d5~4/nth/1/'
   - 'https://ucarecdn.com/fea4c08f-1cd4-436e-b9b3-50095bedc6d5~4/nth/2/'
   - 'https://ucarecdn.com/fea4c08f-1cd4-436e-b9b3-50095bedc6d5~4/nth/3/'
+
+video:
+  vimeo: ''
+  youtube: ''
 ---
 
 <!-- Use this to force Gatsby to correctly determine optional images/file schema -->
