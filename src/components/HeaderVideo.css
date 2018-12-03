@@ -5,11 +5,8 @@
   background: #000;
 }
 
-.background-video h1 {
-  font-family: var(--font-primary) !important;
-  text-transform: none;
-  font-weight: 700;
-  letter-spacing: 0;
+.background-video img {
+  height: 6rem;
 }
 
 .background-video .wide {
@@ -34,5 +31,9 @@
 @media (max-width: 700px) {
   .background-video {
     height: 30rem;
+  }
+
+  .background-video img {
+    height: 3rem;
   }
 }

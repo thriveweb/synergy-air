@@ -1,12 +1,13 @@
 import React from 'react'
 
+import Image from '../components/Image'
 import './HeaderVideo.css'
 
 const HeaderVideo = ({ source, title }) => {
   return (
     <div className="background-video relative">
       <div className="wide absolute">
-        <h1>{title}</h1>
+        <Image src="/images/logo_footer.svg" alt={title} />
       </div>
 
       <video
