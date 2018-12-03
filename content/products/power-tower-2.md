@@ -2,7 +2,7 @@
 template: SingleProduct
 title: Power Tower
 order: '1'
-featuredImage: 'https://ucarecdn.com/3c08e0fe-5f1a-4241-9dd6-1e6775758fd0/'
+featuredImage: 'https://ucarecdn.com/5623fa2e-a206-4e22-bb1d-a701a9a6500f/'
 overview: "* Patented integrated continuous variable transmission\n* Potential power range of up to one million watts at\n* 150 step cycles per minute\n* Automatic range of movement variability up to 65cm\n\nMultiple operational modes, including, but not limited to:\n\n* Total body climbing\n* Lower body climbing/stepping (supported and unsupported)\n* Upper body ‘hang pull’ and ‘push press’\n* Upper body reciprocal and/or single arm ‘hang pull’ and ‘push press’\n* Lower body reciprocal and/or one arm supported chest press and row\n* Reciprocal calf press\n* Deadlift and pushdown\n\nDIMENSIONS\r\n\n• 2400 H x 1250 W x 900 L (mm)"
 productSlider:
   - 'https://ucarecdn.com/dad93ff8-7bd9-42f0-8272-36ae30088357~7/nth/0/'
