@@ -2,7 +2,7 @@
 template: SingleProduct
 title: Power Climber
 order: '2'
-featuredImage: 'https://ucarecdn.com/1d08fb7f-e9a1-4be3-b3f8-bea5f04804d4/'
+featuredImage: 'https://ucarecdn.com/3f88f5cd-240a-4257-9aae-dd0228cf3ff4/'
 overview: >-
   * Patented integrated continuous variable transmission
 
