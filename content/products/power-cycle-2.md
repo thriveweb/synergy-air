@@ -2,7 +2,7 @@
 template: SingleProduct
 title: Power Cycle
 order: '4'
-featuredImage: 'https://ucarecdn.com/ba020af4-e007-4610-ba8a-935efec8f5db/'
+featuredImage: 'https://ucarecdn.com/0bd902df-d5d6-4cc0-9211-72af867f9d00/'
 overview: |-
   Patented integrated continuous variable transmission
   - Weighted air displacement turbine with gearing ratio of 1:6 to 1:24
