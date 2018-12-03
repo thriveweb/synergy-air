@@ -2,7 +2,7 @@
 template: SingleProduct
 title: Cycle Ergometer
 order: '7'
-featuredImage: 'https://ucarecdn.com/6c3738ba-b860-4213-862c-b917e91b3557/'
+featuredImage: 'https://ucarecdn.com/03d790b7-360a-4143-a497-ce2a0e583044/'
 overview: |-
   * Weighted air displacement turbine with gearing ratio of 1:13
   * 2370 watts @ 150 rpm
