@@ -2,7 +2,7 @@
 template: SingleProduct
 title: Bionic Power Cycle
 order: '3'
-featuredImage: 'https://ucarecdn.com/79c5cffd-bb89-468a-9e04-f9190b53801c/'
+featuredImage: 'https://ucarecdn.com/0cd567c3-0322-449f-ad4b-0a9107a54d26/'
 overview: |-
   * Patented integrated continuous variable transmission
   * Weighted air displacement turbine with gearing ratio of 1:7 to 1:28
