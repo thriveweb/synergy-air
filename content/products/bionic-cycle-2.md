@@ -2,7 +2,7 @@
 template: SingleProduct
 title: Bionic Cycle
 order: '6'
-featuredImage: 'https://ucarecdn.com/9ba5603e-a70e-4c13-8bfd-255bb9e89abd/'
+featuredImage: 'https://ucarecdn.com/06db0dea-dc62-44e0-8f19-6b76b71084db/'
 overview: |-
   * Weighted air displacement turbine with gearing ratio of 1:17
   * 4350 watts @ 150 rpm
