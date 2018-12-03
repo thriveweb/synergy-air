@@ -224,8 +224,25 @@ collections: # A list of collections the CMS should be able to edit
         widget: 'hidden'
         default: 'SingleProduct'
 
+      - { label: Slug, name: slug, widget: string }
       - { label: Title, name: title, widget: string }
       - { label: Order, name: order, widget: number }
+
+      - label: 'Categories'
+        name: 'categories'
+        widget: 'list'
+        required: false
+        fields:
+          - {
+              label: Category,
+              name: category,
+              widget: select,
+              options: ['Classic Series', 'Evolution Series'],
+              collection: productCategories,
+              searchFields: ['title'],
+              valueField: title,
+            }
+
       - { label: Featured Image, name: featuredImage, widget: image }
       - { label: Overview, name: overview, widget: markdown }
 
@@ -250,21 +267,6 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { label: Vimeo, name: vimeo, widget: string, required: false }
           - { label: Youtube, name: youtube, widget: string, required: false }
-
-      - label: 'Categories'
-        name: 'categories'
-        widget: 'list'
-        required: false
-        fields:
-          - {
-              label: Category,
-              name: category,
-              widget: select,
-              options: ['Classic Series', 'Evolution Series'],
-              collection: productCategories,
-              searchFields: ['title'],
-              valueField: title,
-            }
 
       - label: 'Meta'
         required: false

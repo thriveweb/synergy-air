@@ -1,6 +1,7 @@
 ---
 template: SingleProduct
 title: Bionic Power Cycle
+slug: 'evolution-series/bionic-power-cycle'
 order: '3'
 featuredImage: 'https://ucarecdn.com/b65d15df-8782-405d-819b-68d9d44958fd/'
 overview: |-
@@ -23,4 +24,3 @@ downloads:
 categories:
   - category: Evolution Series
 ---
-

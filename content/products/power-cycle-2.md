@@ -2,6 +2,7 @@
 template: SingleProduct
 title: Power Cycle
 order: '4'
+slug: 'classic-series/power-cycle'
 featuredImage: 'https://ucarecdn.com/0bd902df-d5d6-4cc0-9211-72af867f9d00/'
 overview: |-
   Patented integrated continuous variable transmission
@@ -17,4 +18,3 @@ downloads:
 categories:
   - category: Classic Series
 ---
-

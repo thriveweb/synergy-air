@@ -1,7 +1,10 @@
 ---
 template: SingleProduct
 title: Bionic Cycle
+slug: 'evolution-series/bionic-cycle'
 order: '6'
+categories:
+  - category: Evolution Series
 featuredImage: 'https://ucarecdn.com/3410080c-3c82-45d2-91e5-225828090f37/'
 overview: |-
   * Weighted air displacement turbine with gearing ratio of 1:17
@@ -19,7 +22,4 @@ productSlider:
 downloads:
   - link: 'https://ucarecdn.com/79062c6e-0f94-4a51-a9a8-d3d96e5e7cce/'
     name: SynergyAir CTV and Air Displacement Dynamics
-categories:
-  - category: Evolution Series
 ---
-

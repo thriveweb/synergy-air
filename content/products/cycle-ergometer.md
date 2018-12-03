@@ -1,6 +1,7 @@
 ---
 template: SingleProduct
 title: Cycle Ergometer
+slug: 'evolution-series/cycle-ergometer'
 order: '7'
 featuredImage: 'https://ucarecdn.com/03d790b7-360a-4143-a497-ce2a0e583044/'
 overview: |-
@@ -17,4 +18,3 @@ downloads:
 categories:
   - category: Evolution Series
 ---
-

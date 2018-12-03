@@ -1,6 +1,7 @@
 ---
 template: SingleProduct
 title: Mag Cycle
+slug: 'classic-series/mag-cycle'
 order: '8'
 featuredImage: 'https://ucarecdn.com/3c457867-576c-4cdc-b7db-62cc7c0807b8/'
 overview: Torque sensor for accurate watts measurement
@@ -12,4 +13,3 @@ downloads:
 categories:
   - category: Classic Series
 ---
-

@@ -2,6 +2,7 @@
 template: SingleProduct
 title: Power Swim / Paddle Ergometer
 order: '5'
+slug: 'classic-series/power-swim-paddle-ergometer'
 featuredImage: 'https://ucarecdn.com/2b7540e4-6ea2-45f7-bdde-852b98bd7138/'
 overview: "SynergyAIR is an innovative and comprehensive range of ultra-heavy duty air displacement powered mechanical ergometers, designed to facilitate unprecedented strength and conditioning workout options that effectively cater for everyone, ranging from rehabilitation clients to high performance elite athletes.\r\n\n\r\n\nKEY FEATURES\r\n\n• Patented integrated continuous variable transmission.\r\n\n• Swimming and Board Paddling exercise options.\r\n\n• Weighted air displacement turbine \r\n\n• Seat / lying pad stability adjustment\r\n\n• Independent crank mode.\r\n\n\r\n\nDIMENSIONS\r\n\n• 1420 H x 610 W x 2340 L (mm)"
 productSlider:
@@ -13,4 +14,3 @@ downloads:
 categories:
   - category: Classic Series
 ---
-

@@ -1,6 +1,7 @@
 ---
 template: SingleProduct
 title: Power Climber
+slug: 'evolution-series/power-climber'
 order: '2'
 featuredImage: 'https://ucarecdn.com/3f88f5cd-240a-4257-9aae-dd0228cf3ff4/'
 overview: >-
@@ -25,4 +26,3 @@ downloads:
 categories:
   - category: Evolution Series
 ---
-

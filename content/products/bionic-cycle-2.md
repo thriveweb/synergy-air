@@ -1,6 +1,7 @@
 ---
 template: SingleProduct
 title: Bionic Cycle
+slug: 'classic-series/bionic-cycle'
 order: '6'
 featuredImage: 'https://ucarecdn.com/06db0dea-dc62-44e0-8f19-6b76b71084db/'
 overview: |-
@@ -22,4 +23,3 @@ downloads:
 categories:
   - category: Classic Series
 ---
-
