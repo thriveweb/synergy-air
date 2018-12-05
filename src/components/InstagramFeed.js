@@ -16,7 +16,7 @@ export default class InstagramFeed extends Component {
     instagramUsername: ''
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const parsed = this.parseInstagramUrl(this.props.instagramUrl)
     const instagramUsername = parsed ? parsed[1] : ''
     if (instagramUsername) this.fetchInstagram(instagramUsername)
