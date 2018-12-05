@@ -83,7 +83,7 @@ export const SingleProductTemplate = ({
       {!!video && (
         <div className="thin">
           {video.map((item, index) => (
-            <div>
+            <div key={`video-${index}`}>
               {!!item.vimeo && (
                 <div className="vimeo">
                   <iframe
