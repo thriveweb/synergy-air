@@ -1,8 +1,10 @@
 ---
 template: SingleProduct
+slug: evolution-series/bionic-power-cycle
 title: Bionic Power Cycle
-slug: 'evolution-series/bionic-power-cycle'
 order: '3'
+categories:
+  - category: Evolution Series
 featuredImage: 'https://ucarecdn.com/b65d15df-8782-405d-819b-68d9d44958fd/'
 overview: |-
   * Patented integrated continuous variable transmission
@@ -19,8 +21,7 @@ productSlider:
   - 'https://ucarecdn.com/eb3ccb25-c34b-423f-b63f-0e6389833970~3/nth/1/'
   - 'https://ucarecdn.com/eb3ccb25-c34b-423f-b63f-0e6389833970~3/nth/2/'
 downloads:
-  - link: 'https://ucarecdn.com/cb935a42-044b-48b0-bcf6-e04330357a4e/'
-    name: SynergyAir CTV and Air Displacement Dynamics
-categories:
-  - category: Evolution Series
+  - link: 'https://ucarecdn.com/4a209236-3338-4a07-8620-127a3010ac60/'
+    name: SynergyAIR CTV and Air Displacement Dynamics
 ---
+
