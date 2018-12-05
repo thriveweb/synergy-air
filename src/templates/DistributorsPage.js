@@ -25,6 +25,8 @@ export const DistributorsPageTemplate = ({ title, distributors }) => (
               </p>
             )}
 
+            {item.region && <p>{item.region}</p>}
+
             {item.phone && (
               <p>
                 <span>P</span>
@@ -79,6 +81,7 @@ export const pageQuery = graphql`
         title
         distributors {
           title
+          region
           phone
           email
           address
