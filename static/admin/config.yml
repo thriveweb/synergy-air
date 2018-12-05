@@ -262,7 +262,7 @@ collections: # A list of collections the CMS should be able to edit
 
       - label: 'Video'
         name: 'video'
-        widget: 'object'
+        widget: 'list'
         required: false
         fields:
           - { label: Vimeo, name: vimeo, widget: string, required: false }

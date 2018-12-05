@@ -82,24 +82,28 @@ export const SingleProductTemplate = ({
       </div>
       {!!video && (
         <div className="thin">
-          {!!video.vimeo && (
-            <div className="vimeo">
-              <iframe
-                title={`vimeo + ${title}`}
-                src={`https://player.vimeo.com/video/${video.vimeo}`}
-                frameBorder="0"
-              />
+          {video.map((item, index) => (
+            <div>
+              {!!item.vimeo && (
+                <div className="vimeo">
+                  <iframe
+                    title={`vimeo + ${title}`}
+                    src={`https://player.vimeo.com/video/${item.vimeo}`}
+                    frameBorder="0"
+                  />
+                </div>
+              )}
+              {!!item.youtube && (
+                <div className="youtube">
+                  <iframe
+                    title={`youtube + ${title}`}
+                    src={`https://www.youtube.com/embed/${item.youtube}`}
+                    frameborder="0"
+                  />
+                </div>
+              )}
             </div>
-          )}
-          {!!video.youtube && (
-            <div className="youtube">
-              <iframe
-                title={`youtube + ${title}`}
-                src={`https://www.youtube.com/embed/${video.youtube}`}
-                frameborder="0"
-              />
-            </div>
-          )}
+          ))}
         </div>
       )}
     </section>

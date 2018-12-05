@@ -23,5 +23,7 @@ productSlider:
 downloads:
   - link: 'https://ucarecdn.com/4a209236-3338-4a07-8620-127a3010ac60/'
     name: SynergyAIR CTV and Air Displacement Dynamics
+video:
+  - vimeo: ''
+    youtube: ''
 ---
-
