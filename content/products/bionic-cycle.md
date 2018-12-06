@@ -23,7 +23,7 @@ downloads:
   - link: 'https://ucarecdn.com/1292dbab-d4a2-496f-838d-755bd43a5f66/'
     name: SynergyAIR CTV and Air Displacement Dynamics
 video:
-  - vimeo: ''
+  - vimeo: '293893952'
     youtube: ''
 ---
 
