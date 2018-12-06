@@ -21,6 +21,6 @@ downloads:
 video:
   - vimeo: '303613438'
     youtube: ''
-  - vimeo: 'https://vimeo.com/297030223'
+  - vimeo: '297030223'
 ---
 
