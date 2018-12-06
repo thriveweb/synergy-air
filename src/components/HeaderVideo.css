@@ -1,5 +1,5 @@
 .background-video {
-  height: 80rem;
+  height: calc(100vh - 7.45rem);
   display: block;
   overflow: hidden;
   background: #000;
@@ -28,7 +28,7 @@
   opacity: 0.7;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
   .background-video {
     height: 30rem;
   }
