@@ -7,8 +7,8 @@ categories:
   - category: Evolution Series
 featuredImage: 'https://ucarecdn.com/3410080c-3c82-45d2-91e5-225828090f37/'
 overview: |-
-  * Weighted air displacement turbine with gearing ratio of 1:17
-  * 4350 watts @ 150 rpm
+  * Weighted air displacement turbine with gearing ratio of 1:13
+  * 2370 watts @ 150 rpm
   * Ultra smooth and quiet belt drive
 
   Multiple operational modes, including:
@@ -26,3 +26,4 @@ video:
   - vimeo: ''
     youtube: ''
 ---
+
