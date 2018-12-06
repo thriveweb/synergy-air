@@ -48,6 +48,14 @@ export default class Nav extends Component {
           </Link>
           <div className="nav-links">
             <NavLink to="/about/">About</NavLink>
+            <a
+              href="https://poweruprevolution.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="NavLink"
+            >
+              Power Up
+            </a>
             <div
               className={`NavLink has-children relative ${
                 this.state['navListproducts'] ? 'dropdown-active' : ''
