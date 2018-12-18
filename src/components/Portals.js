@@ -28,9 +28,9 @@ export default ({ portals }) => (
               />
             </div>
 
-            <Link to={item.distLink} className="button">
+            {/* <Link to={item.distLink} className="button">
               View distributors
-            </Link>
+            </Link> */}
           </div>
         )
       })}

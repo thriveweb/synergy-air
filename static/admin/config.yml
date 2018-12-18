@@ -43,7 +43,6 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Title, name: title, widget: string }
               - { label: Image, name: image, widget: image }
               - { label: Product Link, name: productLink, widget: string }
-              - { label: Distributors Link, name: distLink, widget: string }
 
           - label: 'Meta'
             required: false

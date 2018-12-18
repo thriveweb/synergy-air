@@ -44,7 +44,6 @@ export const pageQuery = graphql`
           title
           image
           productLink
-          distLink
         }
       }
     }
