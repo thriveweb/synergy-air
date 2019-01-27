@@ -223,13 +223,6 @@
   }
 }
 
-@media (max-height: 850px) {
-  .nav-links {
-    justify-content: flex-start;
-    padding-top: 5rem;
-  }
-}
-
 @keyframes Nav--Link {
   from {
     transform: translate(0rem, 1rem);
