@@ -83,7 +83,7 @@ export default class InstagramFeed extends Component {
 const Post = ({ src, code, caption }) => (
   <a
     className="InstagramFeed--EmptyPost InstagramFeed--EmptyPost-loaded"
-    href={`https://instagram.com/p/${code}`}
+    href="https://www.instagram.com/synergyfitnessequipment/"
     rel="noopener noreferrer"
     target="_blank"
     aria-label="Instagram Post Link"
